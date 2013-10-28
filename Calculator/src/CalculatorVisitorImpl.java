@@ -8,6 +8,14 @@ public class CalculatorVisitorImpl extends CalculatorBaseVisitor<Integer> {
     private final Map<String, Integer> declaredVariables = new HashMap<>();
 
     @Override
+    public Integer visitPower(@NotNull CalculatorParser.PowerContext ctx) {
+        List<CalculatorParser.ExprContext> expr = ctx.expr();
+        if (expr.size() != 2)
+            throw new RuntimeException("+ is a binary op");
+         return (int)Math.pow(visit(expr.get(0)), visit(expr.get(1)));
+    }
+
+    @Override
     public Integer visitId(@NotNull CalculatorParser.IdContext ctx) {
         String id = ctx.ID().getText();
         if (!declaredVariables.containsKey(id))

@@ -5,7 +5,8 @@ input
         ;
 
 expr
-        : MINUS expr            # uminus
+        : expr POWER expr
+        | MINUS expr            # uminus
         | expr MULT expr        # mult
         | expr DIV expr         # div
         | expr PLUS expr        # plus
@@ -16,6 +17,7 @@ expr
         | LPAR expr RPAR     # pars
         ;
 
+POWER   : '**'
 INT     : [0-9]+;
 WS      : [ \t\r\n]+ -> skip;
 ID      : [a-zA-Z_][a-zA-Z_ 0-9]*;
