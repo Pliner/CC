@@ -13,11 +13,15 @@ public class CalculatorListenerImpl extends CalculatorBaseListener {
 
     @Override
     public void enterMultExpr(@NotNull CalculatorParser.MultExprContext ctx) {
+        if(ctx.parent instanceof CalculatorParser.MultExprContext)
+            return;
         print("(* ");
     }
 
     @Override
     public void exitMultExpr(@NotNull CalculatorParser.MultExprContext ctx) {
+        if(ctx.parent instanceof CalculatorParser.MultExprContext)
+            return;
         print(")");
     }
 
@@ -33,11 +37,15 @@ public class CalculatorListenerImpl extends CalculatorBaseListener {
 
     @Override
     public void enterPlusExpr(@NotNull CalculatorParser.PlusExprContext ctx) {
+        if(ctx.parent instanceof CalculatorParser.PlusExprContext)
+            return;
         print("(+ ");
     }
 
     @Override
     public void exitPlusExpr(@NotNull CalculatorParser.PlusExprContext ctx) {
+        if(ctx.parent instanceof CalculatorParser.PlusExprContext)
+            return;
         print(")");
     }
 
@@ -67,7 +75,8 @@ public class CalculatorListenerImpl extends CalculatorBaseListener {
     }
 
     @Override
-    public void exitMinusExpr(@NotNull CalculatorParser.MinusExprContext ctx) {  print(")");
+    public void exitMinusExpr(@NotNull CalculatorParser.MinusExprContext ctx) {
+        print(")");
     }
 
     @Override

@@ -3,12 +3,9 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
 public class Main {
     public static void main(String[] args) throws Exception {
-        /*String a = "a + b + c;a+c;";
+        /*String a = "a + b + c * d * e;";
         InputStream is = new ByteArrayInputStream(a.getBytes());
         ANTLRInputStream input = new ANTLRInputStream(is);*/
         ANTLRInputStream input = new ANTLRInputStream(System.in);
