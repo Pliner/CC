@@ -4,10 +4,12 @@
     <list default="true" id="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" name="Default" comment="" />
     <ignored path="CC.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Calculator.g4" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1382982256566" ignored="false" />
-    <file path="/Main.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1382896841136" ignored="false" />
+    <file path="/Calculator.g4" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383075876805" ignored="false" />
+    <file path="/Main.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1382983650752" ignored="false" />
     <file path="/CalculatorVisitorImpl.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1382982464727" ignored="false" />
-    <file path="/fragment.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1382897270860" ignored="false" />
+    <file path="/fragment.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1382986364424" ignored="false" />
+    <file path="/CalculatorListenerImpl.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383074910936" ignored="false" />
+    <file path="/a.dummy" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383070960490" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="74" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="78" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -38,7 +40,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="38" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="42" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -53,7 +55,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="64" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="68" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -68,7 +70,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="90" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="94" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -83,7 +85,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="29" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="33" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -98,7 +100,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="19" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="23" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -113,7 +115,37 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="54" class="CalculatorVisitorImpl" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="58" class="CalculatorVisitorImpl" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Translator/src/CalculatorListenerImpl.java" line="0" class="CalculatorListenerImpl.java" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/Translator/src/CalculatorListenerImpl.java" line="1" class="CalculatorListenerImpl.java" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -178,16 +210,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Calculator/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="33" selection-start="812" selection-end="812" vertical-scroll-proportion="0.81869686">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Calculator.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculator/Calculator.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.08">
               <folding />
             </state>
           </provider>
@@ -196,7 +219,25 @@
       <file leaf-file-name="Calculator.g4" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Translator/src/Calculator.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+            <state line="20" column="34" selection-start="0" selection-end="753" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculatorBaseListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Translator/src/CalculatorBaseListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Translator.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Translator/Translator.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,14 +246,14 @@
       <file leaf-file-name="Calculator.g4" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/src/Calculator.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="46" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+            <state line="19" column="46" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculatorBaseVisitor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorBaseVisitor.java">
+      <file leaf-file-name="CalculatorVisitor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -220,20 +261,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ANTLRInputStream.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
+      <file leaf-file-name="CalculatorListenerImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Translator/src/CalculatorListenerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="-10.88">
+            <state line="104" column="16" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Method.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/lang/reflect/Method.java">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Translator/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="605" column="0" selection-start="24861" selection-end="24861" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="10" column="34" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,7 +284,7 @@
       <file leaf-file-name="CalculatorVisitorImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="101" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+            <state line="97" column="5" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -257,10 +300,14 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Calculator/src/Calculator.g4" />
-        <option value="$PROJECT_DIR$/Translator/src/Calculator.g4" />
-        <option value="$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" />
         <option value="$PROJECT_DIR$/Calculator/src/Main.java" />
+        <option value="$PROJECT_DIR$/Calculator/src/Calculator.g4" />
+        <option value="$PROJECT_DIR$/Translator/src/CalculatorBaseListener.java" />
+        <option value="$PROJECT_DIR$/Calculator/src/CalculatorBaseVisitor.java" />
+        <option value="$PROJECT_DIR$/Translator/src/CalculatorListenerImpl.java" />
+        <option value="$PROJECT_DIR$/Translator/src/Calculator.g4" />
+        <option value="$PROJECT_DIR$/Translator/src/Main.java" />
+        <option value="$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" />
       </list>
     </option>
   </component>
@@ -281,7 +328,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -296,7 +343,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -373,7 +420,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,17 +432,17 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Translator/libs/antlr-4.1-complete.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -420,7 +467,7 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Calculator" />
+      <module name="Translator" />
       <envs />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
@@ -499,8 +546,9 @@
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -540,9 +588,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39865997" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6264657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -550,12 +599,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67001677" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25227273" sideWeight="0.7906198" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20938024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -630,56 +678,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Calculator/src/Main.java">
+    <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/CommonToken.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="26" column="15" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.35873017">
+          <folding>
+            <element signature="method#getType#0;class#CommonToken#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/Token.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="15" selection-start="380" selection-end="380" vertical-scroll-proportion="0.777439">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
+    <entry file="jar://$PROJECT_DIR$/Translator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/tree/TerminalNode.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
+        <state line="7" column="28" selection-start="259" selection-end="259" vertical-scroll-proportion="0.3109756">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="605" column="0" selection-start="24861" selection-end="24861" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="35" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="605" column="0" selection-start="24861" selection-end="24861" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/Calculator.iml">
+    <entry file="file://$PROJECT_DIR$/Translator/Translator.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -688,49 +710,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator/src/Calculator.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+        <state line="20" column="34" selection-start="0" selection-end="753" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/src/Calculator.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="46" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorBaseVisitor.java">
+    <entry file="file://$PROJECT_DIR$/Translator/src/CalculatorBaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class">
+    <entry file="file://$PROJECT_DIR$/Translator/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="329" selection-end="449" vertical-scroll-proportion="0.29882812">
+        <state line="10" column="34" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Translator/src/CalculatorListenerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="16" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/Calculator/libs/antlr-4.1-complete.jar!/org/antlr/v4/runtime/ANTLRInputStream.class">
+    <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="1026" selection-end="1026" vertical-scroll-proportion="-10.88">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="101" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+        <state line="97" column="5" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calculator/src/Calculator.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="46" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="33" selection-start="812" selection-end="812" vertical-scroll-proportion="0.81869686">
+        <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.08">
           <folding />
         </state>
       </provider>
@@ -792,7 +823,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,26 +1,32 @@
 grammar Calculator;
 
 input
-        : (expr DELIMETER)+ EOF              # print
+        : line+ EOF
         ;
+
+line:  (expr DELIMITER);
 
 expr
-        : expr POWER expr
-        | MINUS expr            # uminus
-        | expr MULT expr        # mult
-        | expr DIV expr         # div
-        | expr PLUS expr        # plus
-        | expr MINUS expr       # minus
-        | ID EQ expr            # declaration
-        | INT                   # int
-        | ID                    # id
-        | LPAR expr RPAR     # pars
+        : expr POWER expr # powerExpr
+        | MINUS expr # uminusExpr
+        | expr MULT expr # multExpr
+        | expr DIV expr # divExpr
+        | expr PLUS expr # plusExpr
+        | expr MINUS expr # minusExpr
+        | ID EQ expr  # eqExpr
+        | READ ID # readExpr
+        | DISPLAY expr # displayExpr
+        | INT # intExpr
+        | ID  # idExpr
+        | LPAR expr RPAR # parExpr
         ;
 
-POWER   : '**'
+READ    : 'read';
+DISPLAY : 'display';
+POWER   : '**';
 INT     : [0-9]+;
 WS      : [ \t\r\n]+ -> skip;
-ID      : [a-zA-Z_][a-zA-Z_ 0-9]*;
+ID      : [a-zA-Z_][a-zA-Z_0-9]*;
 PLUS    : '+';
 MINUS   : '-';
 MULT    : '*';
@@ -28,4 +34,4 @@ DIV     : '/';
 EQ      : '=';
 LPAR    : '(';
 RPAR    : ')';
-DELIMETER: ';';
+DELIMITER: ';';
