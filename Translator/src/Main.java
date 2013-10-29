@@ -8,10 +8,10 @@ import java.io.InputStream;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String a = "a + b + c;a+c;";
+        /*String a = "a + b + c;a+c;";
         InputStream is = new ByteArrayInputStream(a.getBytes());
-        ANTLRInputStream input = new ANTLRInputStream(is);
-        //ANTLRInputStream input = new ANTLRInputStream(System.in);
+        ANTLRInputStream input = new ANTLRInputStream(is);*/
+        ANTLRInputStream input = new ANTLRInputStream(System.in);
         CalculatorLexer lexer = new CalculatorLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         CalculatorParser parser = new CalculatorParser(tokens);
