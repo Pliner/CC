@@ -71,7 +71,7 @@ public class CalculatorListenerImpl extends CalculatorBaseListener {
 
     @Override
     public void enterMinusExpr(@NotNull CalculatorParser.MinusExprContext ctx) {
-        print("(-");
+        print("(- ");
     }
 
     @Override
@@ -116,7 +116,7 @@ public class CalculatorListenerImpl extends CalculatorBaseListener {
 
     @Override
     public void enterDivExpr(@NotNull CalculatorParser.DivExprContext ctx) {
-        print("(/");
+        print("(/ ");
     }
 
     @Override
