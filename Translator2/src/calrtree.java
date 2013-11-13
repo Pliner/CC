@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calrtree.g 2013-11-14 02:06:40
+// $ANTLR 3.5.1 calrtree.g 2013-11-14 02:24:07
 
 import java.lang.Double;
 import java.lang.Math;
@@ -368,14 +368,14 @@ public class calrtree extends TreeParser {
 					// calrtree.g:27:7: PI
 					{
 					match(input,PI,FOLLOW_PI_in_expr250); 
-					System.out.print(Math.PI + " ");
+					System.out.print("PI ");
 					}
 					break;
 				case 11 :
 					// calrtree.g:28:7: E
 					{
 					match(input,E,FOLLOW_E_in_expr283); 
-					System.out.print(Math.E + " ");
+					System.out.print("E ");
 					}
 					break;
 				case 12 :

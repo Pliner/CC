@@ -24,8 +24,8 @@ expr
     | ^(DISPLAY{System.out.print("(display ");} expr)    {System.out.print(") ");}
     | ^(READ{System.out.print("(read ");} ID{System.out.print($ID.text + " ");})    {System.out.print(") ");}
     | DOUBLE                    {System.out.print($DOUBLE.text + " ");}
-    | PI                        {System.out.print(Math.PI + " ");}
-    | E                         {System.out.print(Math.E + " ");}
+    | PI                        {System.out.print("PI ");}
+    | E                         {System.out.print("E ");}
     | ID                          {System.out.print($ID.text + " ");}
     ;
 

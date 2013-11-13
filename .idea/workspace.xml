@@ -11,7 +11,7 @@
     <file path="/CalculatorListenerImpl.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383076632021" ignored="false" />
     <file path="/a.dummy" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383070960490" ignored="false" />
     <file path="/in" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383139307396" ignored="false" />
-    <file path="/calrtree.g" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1384373186469" ignored="false" />
+    <file path="/calrtree.g" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1384374145374" ignored="false" />
     <file path="/calrtree.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1384348635803" ignored="false" />
     <file path="/calr.g" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1384367562525" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,6 +28,42 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/Calculator/src/CalculatorVisitorImpl.java" line="78" class="CalculatorVisitorImpl" package="">
         <option name="ENABLED" value="true" />
@@ -196,42 +232,6 @@
       </breakpoint>
     </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -241,42 +241,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="calr.tokens" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator2/src/calr.tokens">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calrtree.tokens" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.tokens">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calr.g" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator2/src/calr.g">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="8" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Calculator.g4" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator/src/Calculator.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="343" selection-end="401" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Translator/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -286,22 +250,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calrtree.g" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.g">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="45" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="calrtree.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="106" column="0" selection-start="2584" selection-end="2584" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#calrtree#0;class#calrtree#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -324,13 +277,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Translator2/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="8" selection-start="435" selection-end="435" vertical-scroll-proportion="0.6104651">
+            <state line="31" column="32" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calr.g" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Translator2/src/calr.g">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="8" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calrtree.g" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.g">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="51" selection-start="1024" selection-end="1027" vertical-scroll-proportion="0.7740806">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -356,8 +327,8 @@
         <option value="$PROJECT_DIR$/Translator/src/CalculatorListenerImpl.java" />
         <option value="$PROJECT_DIR$/Translator2/src/calrtree.java" />
         <option value="$PROJECT_DIR$/Translator2/src/calr.g" />
-        <option value="$PROJECT_DIR$/Translator2/src/calrtree.g" />
         <option value="$PROJECT_DIR$/Translator2/src/Main.java" />
+        <option value="$PROJECT_DIR$/Translator2/src/calrtree.g" />
       </list>
     </option>
   </component>
@@ -394,6 +365,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -452,7 +424,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -469,12 +440,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -629,12 +600,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298791" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25227273" sideWeight="0.6549414" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34505862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34505862" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -642,6 +612,7 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298791" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -720,9 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator/src/CalculatorListener.java">
@@ -748,25 +717,19 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/Translator2/libs/antlr-3.5.1-complete-no-st3.jar!/org/antlr/runtime/tree/CommonTree.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="59" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-0.22884013">
-          <folding />
-        </state>
+        <state line="34" column="59" selection-start="1094" selection-end="1094" vertical-scroll-proportion="-0.22884013" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="0" selection-start="2584" selection-end="2584" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#calrtree#0;class#calrtree#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator/src/Calculator.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="343" selection-end="401" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="16" column="7" selection-start="343" selection-end="401" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator/src/Main.java">
@@ -792,22 +755,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator2/src/calr.tokens">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.tokens">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.g">
+    <entry file="file://$PROJECT_DIR$/Translator2/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="31" column="32" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -818,12 +779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Translator2/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.g">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="435" selection-end="435" vertical-scroll-proportion="0.6104651">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="26" column="51" selection-start="1024" selection-end="1027" vertical-scroll-proportion="0.7740806">
+          <folding />
         </state>
       </provider>
     </entry>
