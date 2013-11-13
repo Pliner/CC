@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="antlr-3.5.1-complete-no-st3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Translator2/libs/antlr-3.5.1-complete-no-st3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
