@@ -13,7 +13,7 @@ calc
     ;
 
 lines
-    : (line NL!)+
+    : (line (NL+)!)+
     ;
 
 line
@@ -95,7 +95,7 @@ DIV
     ;
 
 POW
-    : '^'
+    : '**'
     ;
 
 LPAR
@@ -106,14 +106,14 @@ RPAR
     : ')'
     ;
 
+EQ
+    : '='
+    ;
+
 NL
     : '\r'|'\n'
     ;
 
 WHITESPACE
     : ('\t'|' '|'\u000C')+ {$channel = HIDDEN;}
-    ;
-
-EQ
-    : '='
     ;

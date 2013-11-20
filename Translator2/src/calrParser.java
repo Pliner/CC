@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calr.g 2013-11-14 02:24:07
+// $ANTLR 3.5.1 calr.g 2013-11-20 18:03:16
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -125,7 +125,7 @@ public class calrParser extends Parser {
 
 
 	// $ANTLR start "lines"
-	// calr.g:15:1: lines : ( line NL !)+ ;
+	// calr.g:15:1: lines : ( line ( ( NL )+ ) !)+ ;
 	public final calrParser.lines_return lines() throws RecognitionException {
 		calrParser.lines_return retval = new calrParser.lines_return();
 		retval.start = input.LT(1);
@@ -138,25 +138,25 @@ public class calrParser extends Parser {
 		Object NL4_tree=null;
 
 		try {
-			// calr.g:16:5: ( ( line NL !)+ )
-			// calr.g:16:7: ( line NL !)+
+			// calr.g:16:5: ( ( line ( ( NL )+ ) !)+ )
+			// calr.g:16:7: ( line ( ( NL )+ ) !)+
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// calr.g:16:7: ( line NL !)+
-			int cnt1=0;
-			loop1:
+			// calr.g:16:7: ( line ( ( NL )+ ) !)+
+			int cnt2=0;
+			loop2:
 			while (true) {
-				int alt1=2;
-				int LA1_0 = input.LA(1);
-				if ( (LA1_0==DISPLAY||(LA1_0 >= DOUBLE && LA1_0 <= E)||LA1_0==ID||(LA1_0 >= LPAR && LA1_0 <= MINUS)||(LA1_0 >= PI && LA1_0 <= PLUS)||LA1_0==READ) ) {
-					alt1=1;
+				int alt2=2;
+				int LA2_0 = input.LA(1);
+				if ( (LA2_0==DISPLAY||(LA2_0 >= DOUBLE && LA2_0 <= E)||LA2_0==ID||(LA2_0 >= LPAR && LA2_0 <= MINUS)||(LA2_0 >= PI && LA2_0 <= PLUS)||LA2_0==READ) ) {
+					alt2=1;
 				}
 
-				switch (alt1) {
+				switch (alt2) {
 				case 1 :
-					// calr.g:16:8: line NL !
+					// calr.g:16:8: line ( ( NL )+ ) !
 					{
 					pushFollow(FOLLOW_line_in_lines63);
 					line3=line();
@@ -164,16 +164,49 @@ public class calrParser extends Parser {
 
 					adaptor.addChild(root_0, line3.getTree());
 
-					NL4=(Token)match(input,NL,FOLLOW_NL_in_lines65); 
+					// calr.g:16:13: ( ( NL )+ )
+					// calr.g:16:14: ( NL )+
+					{
+					// calr.g:16:14: ( NL )+
+					int cnt1=0;
+					loop1:
+					while (true) {
+						int alt1=2;
+						int LA1_0 = input.LA(1);
+						if ( (LA1_0==NL) ) {
+							alt1=1;
+						}
+
+						switch (alt1) {
+						case 1 :
+							// calr.g:16:14: NL
+							{
+							NL4=(Token)match(input,NL,FOLLOW_NL_in_lines66); 
+							NL4_tree = (Object)adaptor.create(NL4);
+							adaptor.addChild(root_0, NL4_tree);
+
+							}
+							break;
+
+						default :
+							if ( cnt1 >= 1 ) break loop1;
+							EarlyExitException eee = new EarlyExitException(1, input);
+							throw eee;
+						}
+						cnt1++;
+					}
+
+					}
+
 					}
 					break;
 
 				default :
-					if ( cnt1 >= 1 ) break loop1;
-					EarlyExitException eee = new EarlyExitException(1, input);
+					if ( cnt2 >= 1 ) break loop2;
+					EarlyExitException eee = new EarlyExitException(2, input);
 					throw eee;
 				}
-				cnt1++;
+				cnt2++;
 			}
 
 			}
@@ -222,7 +255,7 @@ public class calrParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expr_in_line85);
+			pushFollow(FOLLOW_expr_in_line88);
 			expr5=expr();
 			state._fsp--;
 
@@ -286,7 +319,7 @@ public class calrParser extends Parser {
 
 		try {
 			// calr.g:24:5: (t1= term ( PLUS ^t2= term | MINUS ^t2= term )* | ID EQ ^ expr | READ ^ ID | DISPLAY ^ expr )
-			int alt3=4;
+			int alt4=4;
 			switch ( input.LA(1) ) {
 			case DOUBLE:
 			case E:
@@ -295,17 +328,17 @@ public class calrParser extends Parser {
 			case PI:
 			case PLUS:
 				{
-				alt3=1;
+				alt4=1;
 				}
 				break;
 			case ID:
 				{
-				int LA3_2 = input.LA(2);
-				if ( (LA3_2==EQ) ) {
-					alt3=2;
+				int LA4_2 = input.LA(2);
+				if ( (LA4_2==EQ) ) {
+					alt4=2;
 				}
-				else if ( (LA3_2==DIV||(LA3_2 >= MINUS && LA3_2 <= NL)||(LA3_2 >= PLUS && LA3_2 <= POW)||LA3_2==RPAR) ) {
-					alt3=1;
+				else if ( (LA4_2==DIV||(LA4_2 >= MINUS && LA4_2 <= NL)||(LA4_2 >= PLUS && LA4_2 <= POW)||LA4_2==RPAR) ) {
+					alt4=1;
 				}
 
 				else {
@@ -313,7 +346,7 @@ public class calrParser extends Parser {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 3, 2, input);
+							new NoViableAltException("", 4, 2, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -324,53 +357,53 @@ public class calrParser extends Parser {
 				break;
 			case READ:
 				{
-				alt3=3;
+				alt4=3;
 				}
 				break;
 			case DISPLAY:
 				{
-				alt3=4;
+				alt4=4;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 3, 0, input);
+					new NoViableAltException("", 4, 0, input);
 				throw nvae;
 			}
-			switch (alt3) {
+			switch (alt4) {
 				case 1 :
 					// calr.g:24:7: t1= term ( PLUS ^t2= term | MINUS ^t2= term )*
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_term_in_expr104);
+					pushFollow(FOLLOW_term_in_expr107);
 					t1=term();
 					state._fsp--;
 
 					adaptor.addChild(root_0, t1.getTree());
 
 					// calr.g:24:15: ( PLUS ^t2= term | MINUS ^t2= term )*
-					loop2:
+					loop3:
 					while (true) {
-						int alt2=3;
-						int LA2_0 = input.LA(1);
-						if ( (LA2_0==PLUS) ) {
-							alt2=1;
+						int alt3=3;
+						int LA3_0 = input.LA(1);
+						if ( (LA3_0==PLUS) ) {
+							alt3=1;
 						}
-						else if ( (LA2_0==MINUS) ) {
-							alt2=2;
+						else if ( (LA3_0==MINUS) ) {
+							alt3=2;
 						}
 
-						switch (alt2) {
+						switch (alt3) {
 						case 1 :
 							// calr.g:24:16: PLUS ^t2= term
 							{
-							PLUS6=(Token)match(input,PLUS,FOLLOW_PLUS_in_expr107); 
+							PLUS6=(Token)match(input,PLUS,FOLLOW_PLUS_in_expr110); 
 							PLUS6_tree = (Object)adaptor.create(PLUS6);
 							root_0 = (Object)adaptor.becomeRoot(PLUS6_tree, root_0);
 
-							pushFollow(FOLLOW_term_in_expr112);
+							pushFollow(FOLLOW_term_in_expr115);
 							t2=term();
 							state._fsp--;
 
@@ -381,11 +414,11 @@ public class calrParser extends Parser {
 						case 2 :
 							// calr.g:24:32: MINUS ^t2= term
 							{
-							MINUS7=(Token)match(input,MINUS,FOLLOW_MINUS_in_expr116); 
+							MINUS7=(Token)match(input,MINUS,FOLLOW_MINUS_in_expr119); 
 							MINUS7_tree = (Object)adaptor.create(MINUS7);
 							root_0 = (Object)adaptor.becomeRoot(MINUS7_tree, root_0);
 
-							pushFollow(FOLLOW_term_in_expr121);
+							pushFollow(FOLLOW_term_in_expr124);
 							t2=term();
 							state._fsp--;
 
@@ -395,7 +428,7 @@ public class calrParser extends Parser {
 							break;
 
 						default :
-							break loop2;
+							break loop3;
 						}
 					}
 
@@ -407,15 +440,15 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					ID8=(Token)match(input,ID,FOLLOW_ID_in_expr131); 
+					ID8=(Token)match(input,ID,FOLLOW_ID_in_expr134); 
 					ID8_tree = (Object)adaptor.create(ID8);
 					adaptor.addChild(root_0, ID8_tree);
 
-					EQ9=(Token)match(input,EQ,FOLLOW_EQ_in_expr133); 
+					EQ9=(Token)match(input,EQ,FOLLOW_EQ_in_expr136); 
 					EQ9_tree = (Object)adaptor.create(EQ9);
 					root_0 = (Object)adaptor.becomeRoot(EQ9_tree, root_0);
 
-					pushFollow(FOLLOW_expr_in_expr136);
+					pushFollow(FOLLOW_expr_in_expr139);
 					expr10=expr();
 					state._fsp--;
 
@@ -429,11 +462,11 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					READ11=(Token)match(input,READ,FOLLOW_READ_in_expr144); 
+					READ11=(Token)match(input,READ,FOLLOW_READ_in_expr147); 
 					READ11_tree = (Object)adaptor.create(READ11);
 					root_0 = (Object)adaptor.becomeRoot(READ11_tree, root_0);
 
-					ID12=(Token)match(input,ID,FOLLOW_ID_in_expr147); 
+					ID12=(Token)match(input,ID,FOLLOW_ID_in_expr150); 
 					ID12_tree = (Object)adaptor.create(ID12);
 					adaptor.addChild(root_0, ID12_tree);
 
@@ -445,11 +478,11 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					DISPLAY13=(Token)match(input,DISPLAY,FOLLOW_DISPLAY_in_expr155); 
+					DISPLAY13=(Token)match(input,DISPLAY,FOLLOW_DISPLAY_in_expr158); 
 					DISPLAY13_tree = (Object)adaptor.create(DISPLAY13);
 					root_0 = (Object)adaptor.becomeRoot(DISPLAY13_tree, root_0);
 
-					pushFollow(FOLLOW_expr_in_expr158);
+					pushFollow(FOLLOW_expr_in_expr161);
 					expr14=expr();
 					state._fsp--;
 
@@ -508,33 +541,33 @@ public class calrParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_factor_in_term177);
+			pushFollow(FOLLOW_factor_in_term180);
 			f1=factor();
 			state._fsp--;
 
 			adaptor.addChild(root_0, f1.getTree());
 
 			// calr.g:31:17: ( MULT ^f2= factor | DIV ^f2= factor )*
-			loop4:
+			loop5:
 			while (true) {
-				int alt4=3;
-				int LA4_0 = input.LA(1);
-				if ( (LA4_0==MULT) ) {
-					alt4=1;
+				int alt5=3;
+				int LA5_0 = input.LA(1);
+				if ( (LA5_0==MULT) ) {
+					alt5=1;
 				}
-				else if ( (LA4_0==DIV) ) {
-					alt4=2;
+				else if ( (LA5_0==DIV) ) {
+					alt5=2;
 				}
 
-				switch (alt4) {
+				switch (alt5) {
 				case 1 :
 					// calr.g:31:18: MULT ^f2= factor
 					{
-					MULT15=(Token)match(input,MULT,FOLLOW_MULT_in_term180); 
+					MULT15=(Token)match(input,MULT,FOLLOW_MULT_in_term183); 
 					MULT15_tree = (Object)adaptor.create(MULT15);
 					root_0 = (Object)adaptor.becomeRoot(MULT15_tree, root_0);
 
-					pushFollow(FOLLOW_factor_in_term185);
+					pushFollow(FOLLOW_factor_in_term188);
 					f2=factor();
 					state._fsp--;
 
@@ -545,11 +578,11 @@ public class calrParser extends Parser {
 				case 2 :
 					// calr.g:31:36: DIV ^f2= factor
 					{
-					DIV16=(Token)match(input,DIV,FOLLOW_DIV_in_term189); 
+					DIV16=(Token)match(input,DIV,FOLLOW_DIV_in_term192); 
 					DIV16_tree = (Object)adaptor.create(DIV16);
 					root_0 = (Object)adaptor.becomeRoot(DIV16_tree, root_0);
 
-					pushFollow(FOLLOW_factor_in_term194);
+					pushFollow(FOLLOW_factor_in_term197);
 					f2=factor();
 					state._fsp--;
 
@@ -559,7 +592,7 @@ public class calrParser extends Parser {
 					break;
 
 				default :
-					break loop4;
+					break loop5;
 				}
 			}
 
@@ -610,16 +643,16 @@ public class calrParser extends Parser {
 
 		try {
 			// calr.g:35:5: ( PLUS ^f1= factor | MINUS ^f2= factor | power )
-			int alt5=3;
+			int alt6=3;
 			switch ( input.LA(1) ) {
 			case PLUS:
 				{
-				alt5=1;
+				alt6=1;
 				}
 				break;
 			case MINUS:
 				{
-				alt5=2;
+				alt6=2;
 				}
 				break;
 			case DOUBLE:
@@ -628,26 +661,26 @@ public class calrParser extends Parser {
 			case LPAR:
 			case PI:
 				{
-				alt5=3;
+				alt6=3;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 5, 0, input);
+					new NoViableAltException("", 6, 0, input);
 				throw nvae;
 			}
-			switch (alt5) {
+			switch (alt6) {
 				case 1 :
 					// calr.g:35:7: PLUS ^f1= factor
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					PLUS17=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor213); 
+					PLUS17=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor216); 
 					PLUS17_tree = (Object)adaptor.create(PLUS17);
 					root_0 = (Object)adaptor.becomeRoot(PLUS17_tree, root_0);
 
-					pushFollow(FOLLOW_factor_in_factor218);
+					pushFollow(FOLLOW_factor_in_factor221);
 					f1=factor();
 					state._fsp--;
 
@@ -661,11 +694,11 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					MINUS18=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor226); 
+					MINUS18=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor229); 
 					MINUS18_tree = (Object)adaptor.create(MINUS18);
 					root_0 = (Object)adaptor.becomeRoot(MINUS18_tree, root_0);
 
-					pushFollow(FOLLOW_factor_in_factor231);
+					pushFollow(FOLLOW_factor_in_factor234);
 					f2=factor();
 					state._fsp--;
 
@@ -679,7 +712,7 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					pushFollow(FOLLOW_power_in_factor239);
+					pushFollow(FOLLOW_power_in_factor242);
 					power19=power();
 					state._fsp--;
 
@@ -736,27 +769,27 @@ public class calrParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_atom_in_power256);
+			pushFollow(FOLLOW_atom_in_power259);
 			atom20=atom();
 			state._fsp--;
 
 			adaptor.addChild(root_0, atom20.getTree());
 
 			// calr.g:41:12: ( POW ^f= factor )?
-			int alt6=2;
-			int LA6_0 = input.LA(1);
-			if ( (LA6_0==POW) ) {
-				alt6=1;
+			int alt7=2;
+			int LA7_0 = input.LA(1);
+			if ( (LA7_0==POW) ) {
+				alt7=1;
 			}
-			switch (alt6) {
+			switch (alt7) {
 				case 1 :
 					// calr.g:41:13: POW ^f= factor
 					{
-					POW21=(Token)match(input,POW,FOLLOW_POW_in_power259); 
+					POW21=(Token)match(input,POW,FOLLOW_POW_in_power262); 
 					POW21_tree = (Object)adaptor.create(POW21);
 					root_0 = (Object)adaptor.becomeRoot(POW21_tree, root_0);
 
-					pushFollow(FOLLOW_factor_in_power264);
+					pushFollow(FOLLOW_factor_in_power267);
 					f=factor();
 					state._fsp--;
 
@@ -820,46 +853,46 @@ public class calrParser extends Parser {
 
 		try {
 			// calr.g:45:5: ( DOUBLE | PI | E | ID | LPAR ! expr RPAR !)
-			int alt7=5;
+			int alt8=5;
 			switch ( input.LA(1) ) {
 			case DOUBLE:
 				{
-				alt7=1;
+				alt8=1;
 				}
 				break;
 			case PI:
 				{
-				alt7=2;
+				alt8=2;
 				}
 				break;
 			case E:
 				{
-				alt7=3;
+				alt8=3;
 				}
 				break;
 			case ID:
 				{
-				alt7=4;
+				alt8=4;
 				}
 				break;
 			case LPAR:
 				{
-				alt7=5;
+				alt8=5;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 7, 0, input);
+					new NoViableAltException("", 8, 0, input);
 				throw nvae;
 			}
-			switch (alt7) {
+			switch (alt8) {
 				case 1 :
 					// calr.g:45:7: DOUBLE
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					DOUBLE22=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_atom283); 
+					DOUBLE22=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_atom286); 
 					DOUBLE22_tree = (Object)adaptor.create(DOUBLE22);
 					adaptor.addChild(root_0, DOUBLE22_tree);
 
@@ -871,7 +904,7 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					PI23=(Token)match(input,PI,FOLLOW_PI_in_atom291); 
+					PI23=(Token)match(input,PI,FOLLOW_PI_in_atom294); 
 					PI23_tree = (Object)adaptor.create(PI23);
 					adaptor.addChild(root_0, PI23_tree);
 
@@ -883,7 +916,7 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					E24=(Token)match(input,E,FOLLOW_E_in_atom299); 
+					E24=(Token)match(input,E,FOLLOW_E_in_atom302); 
 					E24_tree = (Object)adaptor.create(E24);
 					adaptor.addChild(root_0, E24_tree);
 
@@ -895,7 +928,7 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					ID25=(Token)match(input,ID,FOLLOW_ID_in_atom307); 
+					ID25=(Token)match(input,ID,FOLLOW_ID_in_atom310); 
 					ID25_tree = (Object)adaptor.create(ID25);
 					adaptor.addChild(root_0, ID25_tree);
 
@@ -907,14 +940,14 @@ public class calrParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					LPAR26=(Token)match(input,LPAR,FOLLOW_LPAR_in_atom315); 
-					pushFollow(FOLLOW_expr_in_atom318);
+					LPAR26=(Token)match(input,LPAR,FOLLOW_LPAR_in_atom318); 
+					pushFollow(FOLLOW_expr_in_atom321);
 					expr27=expr();
 					state._fsp--;
 
 					adaptor.addChild(root_0, expr27.getTree());
 
-					RPAR28=(Token)match(input,RPAR,FOLLOW_RPAR_in_atom320); 
+					RPAR28=(Token)match(input,RPAR,FOLLOW_RPAR_in_atom323); 
 					}
 					break;
 
@@ -944,38 +977,38 @@ public class calrParser extends Parser {
 	public static final BitSet FOLLOW_lines_in_calc42 = new BitSet(new long[]{0x0000000000000000L});
 	public static final BitSet FOLLOW_EOF_in_calc44 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_line_in_lines63 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_NL_in_lines65 = new BitSet(new long[]{0x00000000000B34D2L});
-	public static final BitSet FOLLOW_expr_in_line85 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_expr104 = new BitSet(new long[]{0x0000000000022002L});
-	public static final BitSet FOLLOW_PLUS_in_expr107 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_term_in_expr112 = new BitSet(new long[]{0x0000000000022002L});
-	public static final BitSet FOLLOW_MINUS_in_expr116 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_term_in_expr121 = new BitSet(new long[]{0x0000000000022002L});
-	public static final BitSet FOLLOW_ID_in_expr131 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_EQ_in_expr133 = new BitSet(new long[]{0x00000000000B34D0L});
-	public static final BitSet FOLLOW_expr_in_expr136 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_READ_in_expr144 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_ID_in_expr147 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DISPLAY_in_expr155 = new BitSet(new long[]{0x00000000000B34D0L});
-	public static final BitSet FOLLOW_expr_in_expr158 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_factor_in_term177 = new BitSet(new long[]{0x0000000000004022L});
-	public static final BitSet FOLLOW_MULT_in_term180 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_term185 = new BitSet(new long[]{0x0000000000004022L});
-	public static final BitSet FOLLOW_DIV_in_term189 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_term194 = new BitSet(new long[]{0x0000000000004022L});
-	public static final BitSet FOLLOW_PLUS_in_factor213 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_factor218 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MINUS_in_factor226 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_factor231 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_power_in_factor239 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atom_in_power256 = new BitSet(new long[]{0x0000000000040002L});
-	public static final BitSet FOLLOW_POW_in_power259 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_power264 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DOUBLE_in_atom283 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PI_in_atom291 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_E_in_atom299 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_atom307 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAR_in_atom315 = new BitSet(new long[]{0x00000000000B34D0L});
-	public static final BitSet FOLLOW_expr_in_atom318 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_RPAR_in_atom320 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NL_in_lines66 = new BitSet(new long[]{0x00000000000BB4D2L});
+	public static final BitSet FOLLOW_expr_in_line88 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_term_in_expr107 = new BitSet(new long[]{0x0000000000022002L});
+	public static final BitSet FOLLOW_PLUS_in_expr110 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_term_in_expr115 = new BitSet(new long[]{0x0000000000022002L});
+	public static final BitSet FOLLOW_MINUS_in_expr119 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_term_in_expr124 = new BitSet(new long[]{0x0000000000022002L});
+	public static final BitSet FOLLOW_ID_in_expr134 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_EQ_in_expr136 = new BitSet(new long[]{0x00000000000B34D0L});
+	public static final BitSet FOLLOW_expr_in_expr139 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_READ_in_expr147 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_ID_in_expr150 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DISPLAY_in_expr158 = new BitSet(new long[]{0x00000000000B34D0L});
+	public static final BitSet FOLLOW_expr_in_expr161 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_factor_in_term180 = new BitSet(new long[]{0x0000000000004022L});
+	public static final BitSet FOLLOW_MULT_in_term183 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_factor_in_term188 = new BitSet(new long[]{0x0000000000004022L});
+	public static final BitSet FOLLOW_DIV_in_term192 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_factor_in_term197 = new BitSet(new long[]{0x0000000000004022L});
+	public static final BitSet FOLLOW_PLUS_in_factor216 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_factor_in_factor221 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_MINUS_in_factor229 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_factor_in_factor234 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_power_in_factor242 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_atom_in_power259 = new BitSet(new long[]{0x0000000000040002L});
+	public static final BitSet FOLLOW_POW_in_power262 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_factor_in_power267 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DOUBLE_in_atom286 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PI_in_atom294 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_E_in_atom302 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_atom310 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LPAR_in_atom318 = new BitSet(new long[]{0x00000000000B34D0L});
+	public static final BitSet FOLLOW_expr_in_atom321 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_RPAR_in_atom323 = new BitSet(new long[]{0x0000000000000002L});
 }

@@ -11,7 +11,7 @@ import java.lang.Math;
 }
 
 calc
-    : (expr {System.out.println();})+
+    : (expr NL+{System.out.println();})+
     ;
 
 expr
@@ -19,7 +19,7 @@ expr
     | ^(MINUS{System.out.print("(- ");} expr expr?) {System.out.print(") ");}
     | ^(MULT{System.out.print("(* ");} expr expr)   {System.out.print(") ");}
     | ^(DIV{System.out.print("(/ ");} expr expr)    {System.out.print(") ");}
-    | ^(POW{System.out.print("(^ ");} expr expr)    {System.out.print(") ");}
+    | ^(POW{System.out.print("(expt ");} expr expr)    {System.out.print(") ");}
     | ^(EQ{System.out.print("(define ");} ID{System.out.print($ID.text + " ");} expr)    {System.out.print(") ");}
     | ^(DISPLAY{System.out.print("(display ");} expr)    {System.out.print(") ");}
     | ^(READ{System.out.print("(read ");} ID{System.out.print($ID.text + " ");})    {System.out.print(") ");}

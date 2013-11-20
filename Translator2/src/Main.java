@@ -7,12 +7,16 @@ import java.io.InputStream;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        /*String a = "a=2\nread b\ndisplay b\na=(1 + 2 + 3)\ndisplay 1 + a\n";
+        String a = "read a\n" +
+                "b = a - 1\n" +
+                "display a ** b * (-a + 2 * b + b / 2 - 1)\n" +
+                "read c\n" +
+                "display a + c\n";
         InputStream is = new ByteArrayInputStream(a.getBytes());
         ANTLRInputStream input = new ANTLRInputStream(is);
-        /*/
 
-        ANTLRInputStream input = new ANTLRInputStream(System.in);
+
+        //ANTLRInputStream input = new ANTLRInputStream(System.in);
         // create a lexer that feeds off of input CharStream
         calrLexer lexer = new calrLexer(input);
         // create a buffer of tokens pulled from the lexer

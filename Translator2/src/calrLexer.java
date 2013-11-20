@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calr.g 2013-11-14 02:24:07
+// $ANTLR 3.5.1 calr.g 2013-11-20 18:03:16
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -367,10 +367,11 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = POW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:98:5: ( '^' )
-			// calr.g:98:7: '^'
+			// calr.g:98:5: ( '**' )
+			// calr.g:98:7: '**'
 			{
-			match('^'); 
+			match("**"); 
+
 			}
 
 			state.type = _type;
@@ -422,12 +423,32 @@ public class calrLexer extends Lexer {
 	}
 	// $ANTLR end "RPAR"
 
+	// $ANTLR start "EQ"
+	public final void mEQ() throws RecognitionException {
+		try {
+			int _type = EQ;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// calr.g:110:5: ( '=' )
+			// calr.g:110:7: '='
+			{
+			match('='); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "EQ"
+
 	// $ANTLR start "NL"
 	public final void mNL() throws RecognitionException {
 		try {
 			int _type = NL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:110:5: ( '\\r' | '\\n' )
+			// calr.g:114:5: ( '\\r' | '\\n' )
 			// calr.g:
 			{
 			if ( input.LA(1)=='\n'||input.LA(1)=='\r' ) {
@@ -454,10 +475,10 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = WHITESPACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:114:5: ( ( '\\t' | ' ' | '\\u000C' )+ )
-			// calr.g:114:7: ( '\\t' | ' ' | '\\u000C' )+
+			// calr.g:118:5: ( ( '\\t' | ' ' | '\\u000C' )+ )
+			// calr.g:118:7: ( '\\t' | ' ' | '\\u000C' )+
 			{
-			// calr.g:114:7: ( '\\t' | ' ' | '\\u000C' )+
+			// calr.g:118:7: ( '\\t' | ' ' | '\\u000C' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -502,41 +523,21 @@ public class calrLexer extends Lexer {
 	}
 	// $ANTLR end "WHITESPACE"
 
-	// $ANTLR start "EQ"
-	public final void mEQ() throws RecognitionException {
-		try {
-			int _type = EQ;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:118:5: ( '=' )
-			// calr.g:118:7: '='
-			{
-			match('='); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "EQ"
-
 	@Override
 	public void mTokens() throws RecognitionException {
-		// calr.g:1:8: ( READ | DISPLAY | PI | E | ID | DOUBLE | PLUS | MINUS | MULT | DIV | POW | LPAR | RPAR | NL | WHITESPACE | EQ )
+		// calr.g:1:8: ( READ | DISPLAY | PI | E | ID | DOUBLE | PLUS | MINUS | MULT | DIV | POW | LPAR | RPAR | EQ | NL | WHITESPACE )
 		int alt5=16;
 		switch ( input.LA(1) ) {
 		case 'r':
 			{
 			int LA5_1 = input.LA(2);
 			if ( (LA5_1=='e') ) {
-				int LA5_17 = input.LA(3);
-				if ( (LA5_17=='a') ) {
-					int LA5_21 = input.LA(4);
-					if ( (LA5_21=='d') ) {
-						int LA5_24 = input.LA(5);
-						if ( ((LA5_24 >= '0' && LA5_24 <= '9')||(LA5_24 >= 'A' && LA5_24 <= 'Z')||(LA5_24 >= 'a' && LA5_24 <= 'z')) ) {
+				int LA5_16 = input.LA(3);
+				if ( (LA5_16=='a') ) {
+					int LA5_22 = input.LA(4);
+					if ( (LA5_22=='d') ) {
+						int LA5_25 = input.LA(5);
+						if ( ((LA5_25 >= '0' && LA5_25 <= '9')||(LA5_25 >= 'A' && LA5_25 <= 'Z')||(LA5_25 >= 'a' && LA5_25 <= 'z')) ) {
 							alt5=5;
 						}
 
@@ -568,18 +569,18 @@ public class calrLexer extends Lexer {
 			{
 			int LA5_2 = input.LA(2);
 			if ( (LA5_2=='i') ) {
-				int LA5_18 = input.LA(3);
-				if ( (LA5_18=='s') ) {
-					int LA5_22 = input.LA(4);
-					if ( (LA5_22=='p') ) {
-						int LA5_25 = input.LA(5);
-						if ( (LA5_25=='l') ) {
-							int LA5_27 = input.LA(6);
-							if ( (LA5_27=='a') ) {
-								int LA5_28 = input.LA(7);
-								if ( (LA5_28=='y') ) {
-									int LA5_29 = input.LA(8);
-									if ( ((LA5_29 >= '0' && LA5_29 <= '9')||(LA5_29 >= 'A' && LA5_29 <= 'Z')||(LA5_29 >= 'a' && LA5_29 <= 'z')) ) {
+				int LA5_17 = input.LA(3);
+				if ( (LA5_17=='s') ) {
+					int LA5_23 = input.LA(4);
+					if ( (LA5_23=='p') ) {
+						int LA5_26 = input.LA(5);
+						if ( (LA5_26=='l') ) {
+							int LA5_28 = input.LA(6);
+							if ( (LA5_28=='a') ) {
+								int LA5_29 = input.LA(7);
+								if ( (LA5_29=='y') ) {
+									int LA5_30 = input.LA(8);
+									if ( ((LA5_30 >= '0' && LA5_30 <= '9')||(LA5_30 >= 'A' && LA5_30 <= 'Z')||(LA5_30 >= 'a' && LA5_30 <= 'z')) ) {
 										alt5=5;
 									}
 
@@ -629,8 +630,8 @@ public class calrLexer extends Lexer {
 			{
 			int LA5_3 = input.LA(2);
 			if ( (LA5_3=='I') ) {
-				int LA5_19 = input.LA(3);
-				if ( ((LA5_19 >= '0' && LA5_19 <= '9')||(LA5_19 >= 'A' && LA5_19 <= 'Z')||(LA5_19 >= 'a' && LA5_19 <= 'z')) ) {
+				int LA5_18 = input.LA(3);
+				if ( ((LA5_18 >= '0' && LA5_18 <= '9')||(LA5_18 >= 'A' && LA5_18 <= 'Z')||(LA5_18 >= 'a' && LA5_18 <= 'z')) ) {
 					alt5=5;
 				}
 
@@ -738,17 +739,20 @@ public class calrLexer extends Lexer {
 			break;
 		case '*':
 			{
-			alt5=9;
+			int LA5_9 = input.LA(2);
+			if ( (LA5_9=='*') ) {
+				alt5=11;
+			}
+
+			else {
+				alt5=9;
+			}
+
 			}
 			break;
 		case '/':
 			{
 			alt5=10;
-			}
-			break;
-		case '^':
-			{
-			alt5=11;
 			}
 			break;
 		case '(':
@@ -761,20 +765,20 @@ public class calrLexer extends Lexer {
 			alt5=13;
 			}
 			break;
+		case '=':
+			{
+			alt5=14;
+			}
+			break;
 		case '\n':
 		case '\r':
 			{
-			alt5=14;
+			alt5=15;
 			}
 			break;
 		case '\t':
 		case '\f':
 		case ' ':
-			{
-			alt5=15;
-			}
-			break;
-		case '=':
 			{
 			alt5=16;
 			}
@@ -877,23 +881,23 @@ public class calrLexer extends Lexer {
 				}
 				break;
 			case 14 :
-				// calr.g:1:72: NL
+				// calr.g:1:72: EQ
+				{
+				mEQ(); 
+
+				}
+				break;
+			case 15 :
+				// calr.g:1:75: NL
 				{
 				mNL(); 
 
 				}
 				break;
-			case 15 :
-				// calr.g:1:75: WHITESPACE
+			case 16 :
+				// calr.g:1:78: WHITESPACE
 				{
 				mWHITESPACE(); 
-
-				}
-				break;
-			case 16 :
-				// calr.g:1:86: EQ
-				{
-				mEQ(); 
 
 				}
 				break;
