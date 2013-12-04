@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cc" default="all">
+  
+  
+  <property file="cc.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="128m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/.bundle/**"/>
+    <exclude name="**/*.rbc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.ear"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.swc"/>
+    <include name="*.ane"/>
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.antlr-3.5.1-complete-no-st3.classpath">
+    <pathelement location="${basedir}/Translator2/libs/antlr-3.5.1-complete-no-st3.jar"/>
+  </path>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/Calculator/module_calculator.xml"/>
+  
+  <import file="${basedir}/Translator/module_translator.xml"/>
+  
+  <import file="${basedir}/Translator2/module_translator2.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.calculator, clean.module.translator, clean.module.translator2" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.calculator, compile.module.translator, compile.module.translator2" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.translator2" value="${basedir}/out/artifacts"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.translator2.jar" value="${artifacts.temp.dir}/translator2.jar"/>
+  </target>
+  
+  <target name="artifact.translator2" depends="init.artifacts" description="Build &#39;translator2&#39; artifact">
+    <property name="artifact.temp.output.translator2" value="${artifacts.temp.dir}/translator2"/>
+    <mkdir dir="${artifact.temp.output.translator2}"/>
+    <jar destfile="${temp.jar.path.translator2.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain"/>
+    <copy file="${temp.jar.path.translator2.jar}" tofile="${artifact.temp.output.translator2}/translator2.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.translator2" description="Build all artifacts">
+    <mkdir dir="${artifact.output.translator2}"/>
+    <copy todir="${artifact.output.translator2}">
+      <fileset dir="${artifact.temp.output.translator2}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

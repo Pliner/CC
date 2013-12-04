@@ -1,17 +1,17 @@
 import org.antlr.runtime.*;
 import org.antlr.runtime.tree.*;
-
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
+import org.antlr.stringtemplate.*;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
+        FileReader groupFileR = new FileReader("calrtree.stg");
+        StringTemplateGroup templates = new StringTemplateGroup(groupFileR);
+        groupFileR.close();
+        // create a CharStream that reads from standard input
+        //ANTLRInputStream input = new ANTLRInputStream(System.in);
         InputStream is = new FileInputStream(new File("in.txt"));
         ANTLRInputStream input = new ANTLRInputStream(is);
-
         // create a lexer that feeds off of input CharStream
         calrLexer lexer = new calrLexer(input);
         // create a buffer of tokens pulled from the lexer
@@ -20,7 +20,6 @@ public class Main {
         calrParser parser = new calrParser(tokens);
         // begin parsing at rule r
         calrParser.calc_return r = parser.calc();
-
         CommonTree t = (CommonTree)r.getTree();
         System.out.println(t.toStringTree());
         // Walk resulting tree; create treenode stream first
@@ -29,8 +28,8 @@ public class Main {
         nodes.setTokenStream(tokens);
         // Create a tree Walker attached to the nodes stream
         calrtree walker = new calrtree(nodes);
-        // Invoke the start symbol, rule program
-        walker.calc();
-        //
+        // use loaded templates
+        walker.setTemplateLib(templates);
+        System.out.println(walker.calc());
     }
 }
