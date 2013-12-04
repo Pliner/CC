@@ -50,3 +50,8 @@ l2d
 lines(e) ::= <<
 <e;separator="\r\n">
 >>
+
+define(i,e,v) ::= <<
+<e>
+dstore <i> ; <v>
+>>

@@ -16,12 +16,12 @@
     <file path="/CalculatorListenerImpl.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383076632021" ignored="false" />
     <file path="/a.dummy" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383070960490" ignored="false" />
     <file path="/in" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1383139307396" ignored="false" />
-    <file path="/calrtree.g" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386158413923" ignored="false" />
+    <file path="/calrtree.g" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386161620412" ignored="false" />
     <file path="/calrtree.java" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386150417937" ignored="false" />
     <file path="/calr.g" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386158370547" ignored="false" />
     <file path="$PROJECT_DIR$/Calculator/module_calculator.xml" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1384955187243" ignored="false" />
-    <file path="/calrtree.stg" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386160673811" ignored="false" />
-    <file path="/in.txt" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386157184587" ignored="false" />
+    <file path="/calrtree.stg" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386161532255" ignored="false" />
+    <file path="/in.txt" changelist="14ff3889-b1d5-400f-a8a7-f88dd1af62c8" time="1386160859298" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +238,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/Compiler/src/calrtree.java" line="105" class="calrtree" package="">
+      <breakpoint url="file://$PROJECT_DIR$/Compiler/src/calrtree.java" line="117" class="calrtree" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -273,37 +273,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calrtree.g" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.g">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="calrtree.stg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.stg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="28" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+            <state line="55" column="12" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calrtree.g" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="calrtree.g" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.g">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="42" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calrtree.tokens" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Translator2/src/calrtree.tokens">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="41" column="24" selection-start="940" selection-end="940" vertical-scroll-proportion="1.4787536">
               <folding />
             </state>
           </provider>
@@ -312,7 +294,7 @@
       <file leaf-file-name="calrtree.stg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calrtree.stg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="1" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+            <state line="50" column="43" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -336,11 +318,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="in.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="in.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/in.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="13" selection-start="10" selection-end="10" vertical-scroll-proportion="0.048158642">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calrParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Compiler/src/calrParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="45" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calrtree.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="318" column="65" selection-start="8529" selection-end="8529" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -348,7 +352,7 @@
       <file leaf-file-name="calrLexer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compiler/src/calrLexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="58" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
+            <state line="43" column="20" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -376,10 +380,10 @@
         <option value="$PROJECT_DIR$/Compiler/src/calrLexer.java" />
         <option value="$PROJECT_DIR$/Compiler/src/calrParser.java" />
         <option value="$PROJECT_DIR$/Compiler/src/calr.g" />
-        <option value="$PROJECT_DIR$/Compiler/src/calrtree.g" />
         <option value="$PROJECT_DIR$/in.txt" />
-        <option value="$PROJECT_DIR$/Compiler/src/calrtree.stg" />
         <option value="$PROJECT_DIR$/calrtree.stg" />
+        <option value="$PROJECT_DIR$/Compiler/src/calrtree.stg" />
+        <option value="$PROJECT_DIR$/Compiler/src/calrtree.g" />
       </list>
     </option>
   </component>
@@ -658,7 +662,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-317" y="-1088" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -674,7 +678,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1248666" sideWeight="0.40362087" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5963791" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5963791" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -752,25 +756,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Compiler/src/calrParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="45" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="78" selection-start="5368" selection-end="5368" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2488#2504#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Compiler/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="1514" selection-end="1606" vertical-scroll-proportion="0.0">
@@ -813,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler/src/calr.tokens">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Translator2/src/calr.g">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="23" selection-start="0" selection-end="1049" vertical-scroll-proportion="0.0">
@@ -834,37 +812,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.g">
+    <entry file="file://$PROJECT_DIR$/in.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="42" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler/src/calrLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="58" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.stg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="28" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/calrtree.stg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="1" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+        <state line="50" column="43" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/in.txt">
+    <entry file="file://$PROJECT_DIR$/Compiler/src/calrLexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="13" selection-start="10" selection-end="10" vertical-scroll-proportion="0.048158642">
+        <state line="43" column="20" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler/src/calrParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="45" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler/src/calr.tokens">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="318" column="65" selection-start="8529" selection-end="8529" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.stg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="12" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler/src/calrtree.g">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="24" selection-start="940" selection-end="940" vertical-scroll-proportion="1.4787536">
           <folding />
         </state>
       </provider>
