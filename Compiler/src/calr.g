@@ -42,7 +42,8 @@ power
     ;
 
 atom
-    : DOUBLE
+    : INT
+    | DOUBLE
     | PI
     | E
     | ID
@@ -67,14 +68,17 @@ E
 ID      : ('a'..'z'|'A'..'Z')('a'..'z'|'A'..'Z'|'0'..'9')*
     ;
 
-DOUBLE
-    : INT
-    | '.' INT
-    | INT '.'
-    | INT '.' INT
+INT
+    : INTPart
     ;
 
-fragment INT
+DOUBLE
+    : '.' INTPart
+    | INTPart '.'
+    | INTPart '.' INTPart
+    ;
+
+fragment INTPart
     : '0'..'9'+
     ;
 

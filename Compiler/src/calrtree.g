@@ -39,6 +39,7 @@ lines
 
 expr
     : ^(DISPLAY e = expr {stackUp(1);})-> print(e={$e.st})
+    | INT{stackUp(2);} -> intToDouble(n={$INT.text})
     | DOUBLE{stackUp(2);} -> double(n={$DOUBLE.text})
     ;
 

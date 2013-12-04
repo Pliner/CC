@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calrtree.g 2013-12-04 17:56:53
+// $ANTLR 3.5.1 calrtree.g 2013-12-04 18:37:12
 
 import java.lang.Double;
 import java.lang.Math;
@@ -19,8 +19,8 @@ import java.util.HashMap;
 public class calrtree extends TreeParser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "DISPLAY", "DIV", "DOUBLE", "E", 
-		"EQ", "EXPR", "ID", "INT", "LPAR", "MINUS", "MULT", "NL", "PI", "PLUS", 
-		"POW", "READ", "RPAR", "WHITESPACE"
+		"EQ", "EXPR", "ID", "INT", "INTPart", "LPAR", "MINUS", "MULT", "NL", "PI", 
+		"PLUS", "POW", "READ", "RPAR", "WHITESPACE"
 	};
 	public static final int EOF=-1;
 	public static final int DISPLAY=4;
@@ -31,16 +31,17 @@ public class calrtree extends TreeParser {
 	public static final int EXPR=9;
 	public static final int ID=10;
 	public static final int INT=11;
-	public static final int LPAR=12;
-	public static final int MINUS=13;
-	public static final int MULT=14;
-	public static final int NL=15;
-	public static final int PI=16;
-	public static final int PLUS=17;
-	public static final int POW=18;
-	public static final int READ=19;
-	public static final int RPAR=20;
-	public static final int WHITESPACE=21;
+	public static final int INTPart=12;
+	public static final int LPAR=13;
+	public static final int MINUS=14;
+	public static final int MULT=15;
+	public static final int NL=16;
+	public static final int PI=17;
+	public static final int PLUS=18;
+	public static final int POW=19;
+	public static final int READ=20;
+	public static final int RPAR=21;
+	public static final int WHITESPACE=22;
 
 	// delegates
 	public TreeParser[] getDelegates() {
@@ -166,7 +167,7 @@ public class calrtree extends TreeParser {
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0==DISPLAY||LA1_0==DOUBLE) ) {
+				if ( (LA1_0==DISPLAY||LA1_0==DOUBLE||LA1_0==INT) ) {
 					alt1=1;
 				}
 
@@ -224,31 +225,39 @@ public class calrtree extends TreeParser {
 
 
 	// $ANTLR start "expr"
-	// calrtree.g:40:1: expr : ( ^( DISPLAY e= expr ) -> print(e=$e.st)| DOUBLE -> double(n=$DOUBLE.text));
+	// calrtree.g:40:1: expr : ( ^( DISPLAY e= expr ) -> print(e=$e.st)| INT -> intToDouble(n=$INT.text)| DOUBLE -> double(n=$DOUBLE.text));
 	public final calrtree.expr_return expr() throws RecognitionException {
 		calrtree.expr_return retval = new calrtree.expr_return();
 		retval.start = input.LT(1);
 
-		CommonTree DOUBLE2=null;
+		CommonTree INT2=null;
+		CommonTree DOUBLE3=null;
 		TreeRuleReturnScope e =null;
 
 		try {
-			// calrtree.g:41:5: ( ^( DISPLAY e= expr ) -> print(e=$e.st)| DOUBLE -> double(n=$DOUBLE.text))
-			int alt2=2;
-			int LA2_0 = input.LA(1);
-			if ( (LA2_0==DISPLAY) ) {
+			// calrtree.g:41:5: ( ^( DISPLAY e= expr ) -> print(e=$e.st)| INT -> intToDouble(n=$INT.text)| DOUBLE -> double(n=$DOUBLE.text))
+			int alt2=3;
+			switch ( input.LA(1) ) {
+			case DISPLAY:
+				{
 				alt2=1;
-			}
-			else if ( (LA2_0==DOUBLE) ) {
+				}
+				break;
+			case INT:
+				{
 				alt2=2;
-			}
-
-			else {
+				}
+				break;
+			case DOUBLE:
+				{
+				alt2=3;
+				}
+				break;
+			default:
 				NoViableAltException nvae =
 					new NoViableAltException("", 2, 0, input);
 				throw nvae;
 			}
-
 			switch (alt2) {
 				case 1 :
 					// calrtree.g:41:7: ^( DISPLAY e= expr )
@@ -273,14 +282,29 @@ public class calrtree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// calrtree.g:42:7: DOUBLE
+					// calrtree.g:42:7: INT
 					{
-					DOUBLE2=(CommonTree)match(input,DOUBLE,FOLLOW_DOUBLE_in_expr162); 
+					INT2=(CommonTree)match(input,INT,FOLLOW_INT_in_expr162); 
 					stackUp(2);
 					// TEMPLATE REWRITE
-					// 42:27: -> double(n=$DOUBLE.text)
+					// 42:24: -> intToDouble(n=$INT.text)
 					{
-						retval.st = templateLib.getInstanceOf("double",new STAttrMap().put("n", (DOUBLE2!=null?DOUBLE2.getText():null)));
+						retval.st = templateLib.getInstanceOf("intToDouble",new STAttrMap().put("n", (INT2!=null?INT2.getText():null)));
+					}
+
+
+
+					}
+					break;
+				case 3 :
+					// calrtree.g:43:7: DOUBLE
+					{
+					DOUBLE3=(CommonTree)match(input,DOUBLE,FOLLOW_DOUBLE_in_expr180); 
+					stackUp(2);
+					// TEMPLATE REWRITE
+					// 43:27: -> double(n=$DOUBLE.text)
+					{
+						retval.st = templateLib.getInstanceOf("double",new STAttrMap().put("n", (DOUBLE3!=null?DOUBLE3.getText():null)));
 					}
 
 
@@ -306,8 +330,9 @@ public class calrtree extends TreeParser {
 
 
 	public static final BitSet FOLLOW_lines_in_calc65 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_lines107 = new BitSet(new long[]{0x0000000000000052L});
+	public static final BitSet FOLLOW_expr_in_lines107 = new BitSet(new long[]{0x0000000000000852L});
 	public static final BitSet FOLLOW_DISPLAY_in_expr137 = new BitSet(new long[]{0x0000000000000004L});
 	public static final BitSet FOLLOW_expr_in_expr143 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_DOUBLE_in_expr162 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_expr162 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DOUBLE_in_expr180 = new BitSet(new long[]{0x0000000000000002L});
 }

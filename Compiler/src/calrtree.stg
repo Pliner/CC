@@ -43,8 +43,8 @@ invokevirtual java/io/PrintStream/println(D)V
 
 double(n) ::= "ldc2_w <n>"
 intToDouble(n) ::= <<
-ldc_w <n>
-i2d
+ldc2_w <n>
+l2d
 >>
 
 lines(e) ::= <<

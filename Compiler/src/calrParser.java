@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calr.g 2013-12-04 17:56:53
+// $ANTLR 3.5.1 calr.g 2013-12-04 18:37:11
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -12,8 +12,8 @@ import org.antlr.runtime.tree.*;
 public class calrParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "DISPLAY", "DIV", "DOUBLE", "E", 
-		"EQ", "EXPR", "ID", "INT", "LPAR", "MINUS", "MULT", "NL", "PI", "PLUS", 
-		"POW", "READ", "RPAR", "WHITESPACE"
+		"EQ", "EXPR", "ID", "INT", "INTPart", "LPAR", "MINUS", "MULT", "NL", "PI", 
+		"PLUS", "POW", "READ", "RPAR", "WHITESPACE"
 	};
 	public static final int EOF=-1;
 	public static final int DISPLAY=4;
@@ -24,16 +24,17 @@ public class calrParser extends Parser {
 	public static final int EXPR=9;
 	public static final int ID=10;
 	public static final int INT=11;
-	public static final int LPAR=12;
-	public static final int MINUS=13;
-	public static final int MULT=14;
-	public static final int NL=15;
-	public static final int PI=16;
-	public static final int PLUS=17;
-	public static final int POW=18;
-	public static final int READ=19;
-	public static final int RPAR=20;
-	public static final int WHITESPACE=21;
+	public static final int INTPart=12;
+	public static final int LPAR=13;
+	public static final int MINUS=14;
+	public static final int MULT=15;
+	public static final int NL=16;
+	public static final int PI=17;
+	public static final int PLUS=18;
+	public static final int POW=19;
+	public static final int READ=20;
+	public static final int RPAR=21;
+	public static final int WHITESPACE=22;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -150,7 +151,7 @@ public class calrParser extends Parser {
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0==DISPLAY||(LA1_0 >= DOUBLE && LA1_0 <= E)||LA1_0==ID||(LA1_0 >= LPAR && LA1_0 <= MINUS)||(LA1_0 >= PI && LA1_0 <= PLUS)||LA1_0==READ) ) {
+				if ( (LA1_0==DISPLAY||(LA1_0 >= DOUBLE && LA1_0 <= E)||(LA1_0 >= ID && LA1_0 <= INT)||(LA1_0 >= LPAR && LA1_0 <= MINUS)||(LA1_0 >= PI && LA1_0 <= PLUS)||LA1_0==READ) ) {
 					alt1=1;
 				}
 
@@ -290,6 +291,7 @@ public class calrParser extends Parser {
 			switch ( input.LA(1) ) {
 			case DOUBLE:
 			case E:
+			case INT:
 			case LPAR:
 			case MINUS:
 			case PI:
@@ -625,6 +627,7 @@ public class calrParser extends Parser {
 			case DOUBLE:
 			case E:
 			case ID:
+			case INT:
 			case LPAR:
 			case PI:
 				{
@@ -796,55 +799,62 @@ public class calrParser extends Parser {
 
 
 	// $ANTLR start "atom"
-	// calr.g:44:1: atom : ( DOUBLE | PI | E | ID | LPAR ! expr RPAR !);
+	// calr.g:44:1: atom : ( INT | DOUBLE | PI | E | ID | LPAR ! expr RPAR !);
 	public final calrParser.atom_return atom() throws RecognitionException {
 		calrParser.atom_return retval = new calrParser.atom_return();
 		retval.start = input.LT(1);
 
 		Object root_0 = null;
 
-		Token DOUBLE22=null;
-		Token PI23=null;
-		Token E24=null;
-		Token ID25=null;
-		Token LPAR26=null;
-		Token RPAR28=null;
-		ParserRuleReturnScope expr27 =null;
+		Token INT22=null;
+		Token DOUBLE23=null;
+		Token PI24=null;
+		Token E25=null;
+		Token ID26=null;
+		Token LPAR27=null;
+		Token RPAR29=null;
+		ParserRuleReturnScope expr28 =null;
 
-		Object DOUBLE22_tree=null;
-		Object PI23_tree=null;
-		Object E24_tree=null;
-		Object ID25_tree=null;
-		Object LPAR26_tree=null;
-		Object RPAR28_tree=null;
+		Object INT22_tree=null;
+		Object DOUBLE23_tree=null;
+		Object PI24_tree=null;
+		Object E25_tree=null;
+		Object ID26_tree=null;
+		Object LPAR27_tree=null;
+		Object RPAR29_tree=null;
 
 		try {
-			// calr.g:45:5: ( DOUBLE | PI | E | ID | LPAR ! expr RPAR !)
-			int alt7=5;
+			// calr.g:45:5: ( INT | DOUBLE | PI | E | ID | LPAR ! expr RPAR !)
+			int alt7=6;
 			switch ( input.LA(1) ) {
-			case DOUBLE:
+			case INT:
 				{
 				alt7=1;
 				}
 				break;
-			case PI:
+			case DOUBLE:
 				{
 				alt7=2;
 				}
 				break;
-			case E:
+			case PI:
 				{
 				alt7=3;
 				}
 				break;
-			case ID:
+			case E:
 				{
 				alt7=4;
 				}
 				break;
-			case LPAR:
+			case ID:
 				{
 				alt7=5;
+				}
+				break;
+			case LPAR:
+				{
+				alt7=6;
 				}
 				break;
 			default:
@@ -854,67 +864,79 @@ public class calrParser extends Parser {
 			}
 			switch (alt7) {
 				case 1 :
-					// calr.g:45:7: DOUBLE
+					// calr.g:45:7: INT
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					DOUBLE22=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_atom283); 
-					DOUBLE22_tree = (Object)adaptor.create(DOUBLE22);
-					adaptor.addChild(root_0, DOUBLE22_tree);
+					INT22=(Token)match(input,INT,FOLLOW_INT_in_atom283); 
+					INT22_tree = (Object)adaptor.create(INT22);
+					adaptor.addChild(root_0, INT22_tree);
 
 					}
 					break;
 				case 2 :
-					// calr.g:46:7: PI
+					// calr.g:46:7: DOUBLE
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					PI23=(Token)match(input,PI,FOLLOW_PI_in_atom291); 
-					PI23_tree = (Object)adaptor.create(PI23);
-					adaptor.addChild(root_0, PI23_tree);
+					DOUBLE23=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_atom291); 
+					DOUBLE23_tree = (Object)adaptor.create(DOUBLE23);
+					adaptor.addChild(root_0, DOUBLE23_tree);
 
 					}
 					break;
 				case 3 :
-					// calr.g:47:7: E
+					// calr.g:47:7: PI
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					E24=(Token)match(input,E,FOLLOW_E_in_atom299); 
-					E24_tree = (Object)adaptor.create(E24);
-					adaptor.addChild(root_0, E24_tree);
+					PI24=(Token)match(input,PI,FOLLOW_PI_in_atom299); 
+					PI24_tree = (Object)adaptor.create(PI24);
+					adaptor.addChild(root_0, PI24_tree);
 
 					}
 					break;
 				case 4 :
-					// calr.g:48:7: ID
+					// calr.g:48:7: E
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					ID25=(Token)match(input,ID,FOLLOW_ID_in_atom307); 
-					ID25_tree = (Object)adaptor.create(ID25);
-					adaptor.addChild(root_0, ID25_tree);
+					E25=(Token)match(input,E,FOLLOW_E_in_atom307); 
+					E25_tree = (Object)adaptor.create(E25);
+					adaptor.addChild(root_0, E25_tree);
 
 					}
 					break;
 				case 5 :
-					// calr.g:49:7: LPAR ! expr RPAR !
+					// calr.g:49:7: ID
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					LPAR26=(Token)match(input,LPAR,FOLLOW_LPAR_in_atom315); 
-					pushFollow(FOLLOW_expr_in_atom318);
-					expr27=expr();
+					ID26=(Token)match(input,ID,FOLLOW_ID_in_atom315); 
+					ID26_tree = (Object)adaptor.create(ID26);
+					adaptor.addChild(root_0, ID26_tree);
+
+					}
+					break;
+				case 6 :
+					// calr.g:50:7: LPAR ! expr RPAR !
+					{
+					root_0 = (Object)adaptor.nil();
+
+
+					LPAR27=(Token)match(input,LPAR,FOLLOW_LPAR_in_atom323); 
+					pushFollow(FOLLOW_expr_in_atom326);
+					expr28=expr();
 					state._fsp--;
 
-					adaptor.addChild(root_0, expr27.getTree());
+					adaptor.addChild(root_0, expr28.getTree());
 
-					RPAR28=(Token)match(input,RPAR,FOLLOW_RPAR_in_atom320); 
+					RPAR29=(Token)match(input,RPAR,FOLLOW_RPAR_in_atom328); 
 					}
 					break;
 
@@ -943,39 +965,40 @@ public class calrParser extends Parser {
 
 	public static final BitSet FOLLOW_lines_in_calc42 = new BitSet(new long[]{0x0000000000000000L});
 	public static final BitSet FOLLOW_EOF_in_calc44 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_line_in_lines63 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_NL_in_lines65 = new BitSet(new long[]{0x00000000000B34D2L});
+	public static final BitSet FOLLOW_line_in_lines63 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_NL_in_lines65 = new BitSet(new long[]{0x0000000000166CD2L});
 	public static final BitSet FOLLOW_expr_in_line85 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_expr104 = new BitSet(new long[]{0x0000000000022002L});
-	public static final BitSet FOLLOW_PLUS_in_expr107 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_term_in_expr112 = new BitSet(new long[]{0x0000000000022002L});
-	public static final BitSet FOLLOW_MINUS_in_expr116 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_term_in_expr121 = new BitSet(new long[]{0x0000000000022002L});
+	public static final BitSet FOLLOW_term_in_expr104 = new BitSet(new long[]{0x0000000000044002L});
+	public static final BitSet FOLLOW_PLUS_in_expr107 = new BitSet(new long[]{0x0000000000066CC0L});
+	public static final BitSet FOLLOW_term_in_expr112 = new BitSet(new long[]{0x0000000000044002L});
+	public static final BitSet FOLLOW_MINUS_in_expr116 = new BitSet(new long[]{0x0000000000066CC0L});
+	public static final BitSet FOLLOW_term_in_expr121 = new BitSet(new long[]{0x0000000000044002L});
 	public static final BitSet FOLLOW_ID_in_expr131 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_EQ_in_expr133 = new BitSet(new long[]{0x00000000000B34D0L});
+	public static final BitSet FOLLOW_EQ_in_expr133 = new BitSet(new long[]{0x0000000000166CD0L});
 	public static final BitSet FOLLOW_expr_in_expr136 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_READ_in_expr144 = new BitSet(new long[]{0x0000000000000400L});
 	public static final BitSet FOLLOW_ID_in_expr147 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DISPLAY_in_expr155 = new BitSet(new long[]{0x00000000000B34D0L});
+	public static final BitSet FOLLOW_DISPLAY_in_expr155 = new BitSet(new long[]{0x0000000000166CD0L});
 	public static final BitSet FOLLOW_expr_in_expr158 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_factor_in_term177 = new BitSet(new long[]{0x0000000000004022L});
-	public static final BitSet FOLLOW_MULT_in_term180 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_term185 = new BitSet(new long[]{0x0000000000004022L});
-	public static final BitSet FOLLOW_DIV_in_term189 = new BitSet(new long[]{0x00000000000334C0L});
-	public static final BitSet FOLLOW_factor_in_term194 = new BitSet(new long[]{0x0000000000004022L});
-	public static final BitSet FOLLOW_PLUS_in_factor213 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_factor_in_term177 = new BitSet(new long[]{0x0000000000008022L});
+	public static final BitSet FOLLOW_MULT_in_term180 = new BitSet(new long[]{0x0000000000066CC0L});
+	public static final BitSet FOLLOW_factor_in_term185 = new BitSet(new long[]{0x0000000000008022L});
+	public static final BitSet FOLLOW_DIV_in_term189 = new BitSet(new long[]{0x0000000000066CC0L});
+	public static final BitSet FOLLOW_factor_in_term194 = new BitSet(new long[]{0x0000000000008022L});
+	public static final BitSet FOLLOW_PLUS_in_factor213 = new BitSet(new long[]{0x0000000000066CC0L});
 	public static final BitSet FOLLOW_factor_in_factor218 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_MINUS_in_factor226 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_MINUS_in_factor226 = new BitSet(new long[]{0x0000000000066CC0L});
 	public static final BitSet FOLLOW_factor_in_factor231 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_power_in_factor239 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atom_in_power256 = new BitSet(new long[]{0x0000000000040002L});
-	public static final BitSet FOLLOW_POW_in_power259 = new BitSet(new long[]{0x00000000000334C0L});
+	public static final BitSet FOLLOW_atom_in_power256 = new BitSet(new long[]{0x0000000000080002L});
+	public static final BitSet FOLLOW_POW_in_power259 = new BitSet(new long[]{0x0000000000066CC0L});
 	public static final BitSet FOLLOW_factor_in_power264 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DOUBLE_in_atom283 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PI_in_atom291 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_E_in_atom299 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_atom307 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAR_in_atom315 = new BitSet(new long[]{0x00000000000B34D0L});
-	public static final BitSet FOLLOW_expr_in_atom318 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_RPAR_in_atom320 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INT_in_atom283 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DOUBLE_in_atom291 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PI_in_atom299 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_E_in_atom307 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_atom315 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LPAR_in_atom323 = new BitSet(new long[]{0x0000000000166CD0L});
+	public static final BitSet FOLLOW_expr_in_atom326 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_RPAR_in_atom328 = new BitSet(new long[]{0x0000000000000002L});
 }
