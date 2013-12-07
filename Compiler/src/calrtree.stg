@@ -51,7 +51,43 @@ lines(e) ::= <<
 <e;separator="\r\n">
 >>
 
-define(i,e,v) ::= <<
+define(i,e) ::= <<
 <e>
-dstore <i> ; <v>
+dstore <i>
+>>
+
+resolve(i) ::= <<
+dload <i>
+>>
+
+add(left, right) ::= <<
+<left>
+<right>
+dadd
+>>
+
+
+sub(left, right) ::= <<
+<left>
+<right>
+dsub
+>>
+
+mul(left, right) ::= <<
+<left>
+<right>
+dmul
+>>
+
+
+div(left, right) ::= <<
+<left>
+<right>
+ddiv
+>>
+
+pow(base, power) ::= <<
+<base>
+<power>
+invokestatic    java/lang/Math.pow(DD)D
 >>
