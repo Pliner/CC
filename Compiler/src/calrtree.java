@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calrtree.g 2013-12-07 15:45:23
+// $ANTLR 3.5.1 calrtree.g 2013-12-08 14:01:12
 
 import java.lang.Double;
 import java.lang.Math;
@@ -186,7 +186,7 @@ public class calrtree extends TreeParser {
 			while (true) {
 				int alt1=2;
 				int LA1_0 = input.LA(1);
-				if ( ((LA1_0 >= DISPLAY && LA1_0 <= EQ)||(LA1_0 >= ID && LA1_0 <= INT)||(LA1_0 >= MINUS && LA1_0 <= MULT)||(LA1_0 >= PI && LA1_0 <= POW)) ) {
+				if ( ((LA1_0 >= DISPLAY && LA1_0 <= EQ)||(LA1_0 >= ID && LA1_0 <= INT)||(LA1_0 >= MINUS && LA1_0 <= MULT)||(LA1_0 >= PI && LA1_0 <= READ)) ) {
 					alt1=1;
 				}
 
@@ -244,15 +244,16 @@ public class calrtree extends TreeParser {
 
 
 	// $ANTLR start "expr"
-	// calrtree.g:59:1: expr : ( ^( DISPLAY e= expr ) -> print(e=$e.st)| ^( EQ ID e= expr ) -> define(i=getIndex($ID.text)e=$e.st)| ^( PLUS left= expr right= expr ) -> add(left=$left.stright=$right.st)| ^( MINUS left= expr right= expr ) -> sub(left=$left.stright=$right.st)| ^( MULT left= expr right= expr ) -> mul(left=$left.stright=$right.st)| ^( DIV left= expr right= expr ) -> div(left=$left.stright=$right.st)| ^( POW base= expr power= expr ) -> pow(base=$base.stpower=$power.st)| INT -> intToDouble(n=$INT.text)| DOUBLE -> double(n=$DOUBLE.text)| PI -> double(n=Math.PI)| E -> double(n=Math.E)| ID -> resolve(i=getIndex($ID.text)));
+	// calrtree.g:59:1: expr : ( ^( DISPLAY e= expr ) -> print(e=$e.st)| ^( READ ID ) -> read(i=getIndex($ID.text))| ^( EQ ID e= expr ) -> define(i=getIndex($ID.text)e=$e.st)| ^( PLUS left= expr right= expr ) -> add(left=$left.stright=$right.st)| ^( MINUS left= expr right= expr ) -> sub(left=$left.stright=$right.st)| ^( MULT left= expr right= expr ) -> mul(left=$left.stright=$right.st)| ^( DIV left= expr right= expr ) -> div(left=$left.stright=$right.st)| ^( POW base= expr power= expr ) -> pow(base=$base.stpower=$power.st)| INT -> intToDouble(n=$INT.text)| DOUBLE -> double(n=$DOUBLE.text)| PI -> double(n=Math.PI)| E -> double(n=Math.E)| ID -> resolve(i=getIndex($ID.text)));
 	public final calrtree.expr_return expr() throws RecognitionException {
 		calrtree.expr_return retval = new calrtree.expr_return();
 		retval.start = input.LT(1);
 
 		CommonTree ID2=null;
-		CommonTree INT3=null;
-		CommonTree DOUBLE4=null;
-		CommonTree ID5=null;
+		CommonTree ID3=null;
+		CommonTree INT4=null;
+		CommonTree DOUBLE5=null;
+		CommonTree ID6=null;
 		TreeRuleReturnScope e =null;
 		TreeRuleReturnScope left =null;
 		TreeRuleReturnScope right =null;
@@ -260,67 +261,72 @@ public class calrtree extends TreeParser {
 		TreeRuleReturnScope power =null;
 
 		try {
-			// calrtree.g:60:5: ( ^( DISPLAY e= expr ) -> print(e=$e.st)| ^( EQ ID e= expr ) -> define(i=getIndex($ID.text)e=$e.st)| ^( PLUS left= expr right= expr ) -> add(left=$left.stright=$right.st)| ^( MINUS left= expr right= expr ) -> sub(left=$left.stright=$right.st)| ^( MULT left= expr right= expr ) -> mul(left=$left.stright=$right.st)| ^( DIV left= expr right= expr ) -> div(left=$left.stright=$right.st)| ^( POW base= expr power= expr ) -> pow(base=$base.stpower=$power.st)| INT -> intToDouble(n=$INT.text)| DOUBLE -> double(n=$DOUBLE.text)| PI -> double(n=Math.PI)| E -> double(n=Math.E)| ID -> resolve(i=getIndex($ID.text)))
-			int alt2=12;
+			// calrtree.g:60:5: ( ^( DISPLAY e= expr ) -> print(e=$e.st)| ^( READ ID ) -> read(i=getIndex($ID.text))| ^( EQ ID e= expr ) -> define(i=getIndex($ID.text)e=$e.st)| ^( PLUS left= expr right= expr ) -> add(left=$left.stright=$right.st)| ^( MINUS left= expr right= expr ) -> sub(left=$left.stright=$right.st)| ^( MULT left= expr right= expr ) -> mul(left=$left.stright=$right.st)| ^( DIV left= expr right= expr ) -> div(left=$left.stright=$right.st)| ^( POW base= expr power= expr ) -> pow(base=$base.stpower=$power.st)| INT -> intToDouble(n=$INT.text)| DOUBLE -> double(n=$DOUBLE.text)| PI -> double(n=Math.PI)| E -> double(n=Math.E)| ID -> resolve(i=getIndex($ID.text)))
+			int alt2=13;
 			switch ( input.LA(1) ) {
 			case DISPLAY:
 				{
 				alt2=1;
 				}
 				break;
-			case EQ:
+			case READ:
 				{
 				alt2=2;
 				}
 				break;
-			case PLUS:
+			case EQ:
 				{
 				alt2=3;
 				}
 				break;
-			case MINUS:
+			case PLUS:
 				{
 				alt2=4;
 				}
 				break;
-			case MULT:
+			case MINUS:
 				{
 				alt2=5;
 				}
 				break;
-			case DIV:
+			case MULT:
 				{
 				alt2=6;
 				}
 				break;
-			case POW:
+			case DIV:
 				{
 				alt2=7;
 				}
 				break;
-			case INT:
+			case POW:
 				{
 				alt2=8;
 				}
 				break;
-			case DOUBLE:
+			case INT:
 				{
 				alt2=9;
 				}
 				break;
-			case PI:
+			case DOUBLE:
 				{
 				alt2=10;
 				}
 				break;
-			case E:
+			case PI:
 				{
 				alt2=11;
 				}
 				break;
-			case ID:
+			case E:
 				{
 				alt2=12;
+				}
+				break;
+			case ID:
+				{
+				alt2=13;
 				}
 				break;
 			default:
@@ -352,22 +358,18 @@ public class calrtree extends TreeParser {
 					}
 					break;
 				case 2 :
-					// calrtree.g:61:7: ^( EQ ID e= expr )
+					// calrtree.g:61:7: ^( READ ID )
 					{
-					match(input,EQ,FOLLOW_EQ_in_expr164); 
+					match(input,READ,FOLLOW_READ_in_expr164); 
 					match(input, Token.DOWN, null); 
 					ID2=(CommonTree)match(input,ID,FOLLOW_ID_in_expr166); 
-					pushFollow(FOLLOW_expr_in_expr170);
-					e=expr();
-					state._fsp--;
-
+					define((ID2!=null?ID2.getText():null));
 					match(input, Token.UP, null); 
 
-					define((ID2!=null?ID2.getText():null));
 					// TEMPLATE REWRITE
-					// 61:43: -> define(i=getIndex($ID.text)e=$e.st)
+					// 61:37: -> read(i=getIndex($ID.text))
 					{
-						retval.st = templateLib.getInstanceOf("define",new STAttrMap().put("i", getIndex((ID2!=null?ID2.getText():null))).put("e", (e!=null?((StringTemplate)e.getTemplate()):null)));
+						retval.st = templateLib.getInstanceOf("read",new STAttrMap().put("i", getIndex((ID2!=null?ID2.getText():null))));
 					}
 
 
@@ -375,15 +377,38 @@ public class calrtree extends TreeParser {
 					}
 					break;
 				case 3 :
-					// calrtree.g:62:7: ^( PLUS left= expr right= expr )
+					// calrtree.g:62:7: ^( EQ ID e= expr )
 					{
-					match(input,PLUS,FOLLOW_PLUS_in_expr196); 
+					match(input,EQ,FOLLOW_EQ_in_expr186); 
 					match(input, Token.DOWN, null); 
-					pushFollow(FOLLOW_expr_in_expr200);
+					ID3=(CommonTree)match(input,ID,FOLLOW_ID_in_expr188); 
+					pushFollow(FOLLOW_expr_in_expr192);
+					e=expr();
+					state._fsp--;
+
+					match(input, Token.UP, null); 
+
+					define((ID3!=null?ID3.getText():null));
+					// TEMPLATE REWRITE
+					// 62:43: -> define(i=getIndex($ID.text)e=$e.st)
+					{
+						retval.st = templateLib.getInstanceOf("define",new STAttrMap().put("i", getIndex((ID3!=null?ID3.getText():null))).put("e", (e!=null?((StringTemplate)e.getTemplate()):null)));
+					}
+
+
+
+					}
+					break;
+				case 4 :
+					// calrtree.g:63:7: ^( PLUS left= expr right= expr )
+					{
+					match(input,PLUS,FOLLOW_PLUS_in_expr218); 
+					match(input, Token.DOWN, null); 
+					pushFollow(FOLLOW_expr_in_expr222);
 					left=expr();
 					state._fsp--;
 
-					pushFollow(FOLLOW_expr_in_expr204);
+					pushFollow(FOLLOW_expr_in_expr226);
 					right=expr();
 					state._fsp--;
 
@@ -391,7 +416,7 @@ public class calrtree extends TreeParser {
 
 					stackDown(2);
 					// TEMPLATE REWRITE
-					// 62:52: -> add(left=$left.stright=$right.st)
+					// 63:52: -> add(left=$left.stright=$right.st)
 					{
 						retval.st = templateLib.getInstanceOf("add",new STAttrMap().put("left", (left!=null?((StringTemplate)left.getTemplate()):null)).put("right", (right!=null?((StringTemplate)right.getTemplate()):null)));
 					}
@@ -400,16 +425,16 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 4 :
-					// calrtree.g:63:7: ^( MINUS left= expr right= expr )
+				case 5 :
+					// calrtree.g:64:7: ^( MINUS left= expr right= expr )
 					{
-					match(input,MINUS,FOLLOW_MINUS_in_expr230); 
+					match(input,MINUS,FOLLOW_MINUS_in_expr252); 
 					match(input, Token.DOWN, null); 
-					pushFollow(FOLLOW_expr_in_expr234);
+					pushFollow(FOLLOW_expr_in_expr256);
 					left=expr();
 					state._fsp--;
 
-					pushFollow(FOLLOW_expr_in_expr238);
+					pushFollow(FOLLOW_expr_in_expr260);
 					right=expr();
 					state._fsp--;
 
@@ -417,7 +442,7 @@ public class calrtree extends TreeParser {
 
 					stackDown(2);
 					// TEMPLATE REWRITE
-					// 63:53: -> sub(left=$left.stright=$right.st)
+					// 64:53: -> sub(left=$left.stright=$right.st)
 					{
 						retval.st = templateLib.getInstanceOf("sub",new STAttrMap().put("left", (left!=null?((StringTemplate)left.getTemplate()):null)).put("right", (right!=null?((StringTemplate)right.getTemplate()):null)));
 					}
@@ -426,16 +451,16 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 5 :
-					// calrtree.g:64:7: ^( MULT left= expr right= expr )
+				case 6 :
+					// calrtree.g:65:7: ^( MULT left= expr right= expr )
 					{
-					match(input,MULT,FOLLOW_MULT_in_expr264); 
+					match(input,MULT,FOLLOW_MULT_in_expr286); 
 					match(input, Token.DOWN, null); 
-					pushFollow(FOLLOW_expr_in_expr268);
+					pushFollow(FOLLOW_expr_in_expr290);
 					left=expr();
 					state._fsp--;
 
-					pushFollow(FOLLOW_expr_in_expr272);
+					pushFollow(FOLLOW_expr_in_expr294);
 					right=expr();
 					state._fsp--;
 
@@ -443,7 +468,7 @@ public class calrtree extends TreeParser {
 
 					stackDown(2);
 					// TEMPLATE REWRITE
-					// 64:52: -> mul(left=$left.stright=$right.st)
+					// 65:52: -> mul(left=$left.stright=$right.st)
 					{
 						retval.st = templateLib.getInstanceOf("mul",new STAttrMap().put("left", (left!=null?((StringTemplate)left.getTemplate()):null)).put("right", (right!=null?((StringTemplate)right.getTemplate()):null)));
 					}
@@ -452,16 +477,16 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 6 :
-					// calrtree.g:65:7: ^( DIV left= expr right= expr )
+				case 7 :
+					// calrtree.g:66:7: ^( DIV left= expr right= expr )
 					{
-					match(input,DIV,FOLLOW_DIV_in_expr298); 
+					match(input,DIV,FOLLOW_DIV_in_expr320); 
 					match(input, Token.DOWN, null); 
-					pushFollow(FOLLOW_expr_in_expr302);
+					pushFollow(FOLLOW_expr_in_expr324);
 					left=expr();
 					state._fsp--;
 
-					pushFollow(FOLLOW_expr_in_expr306);
+					pushFollow(FOLLOW_expr_in_expr328);
 					right=expr();
 					state._fsp--;
 
@@ -469,7 +494,7 @@ public class calrtree extends TreeParser {
 
 					stackDown(2);
 					// TEMPLATE REWRITE
-					// 65:51: -> div(left=$left.stright=$right.st)
+					// 66:51: -> div(left=$left.stright=$right.st)
 					{
 						retval.st = templateLib.getInstanceOf("div",new STAttrMap().put("left", (left!=null?((StringTemplate)left.getTemplate()):null)).put("right", (right!=null?((StringTemplate)right.getTemplate()):null)));
 					}
@@ -478,23 +503,23 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 7 :
-					// calrtree.g:66:7: ^( POW base= expr power= expr )
+				case 8 :
+					// calrtree.g:67:7: ^( POW base= expr power= expr )
 					{
-					match(input,POW,FOLLOW_POW_in_expr332); 
+					match(input,POW,FOLLOW_POW_in_expr354); 
 					match(input, Token.DOWN, null); 
-					pushFollow(FOLLOW_expr_in_expr336);
+					pushFollow(FOLLOW_expr_in_expr358);
 					base=expr();
 					state._fsp--;
 
-					pushFollow(FOLLOW_expr_in_expr340);
+					pushFollow(FOLLOW_expr_in_expr362);
 					power=expr();
 					state._fsp--;
 
 					match(input, Token.UP, null); 
 
 					// TEMPLATE REWRITE
-					// 66:35: -> pow(base=$base.stpower=$power.st)
+					// 67:35: -> pow(base=$base.stpower=$power.st)
 					{
 						retval.st = templateLib.getInstanceOf("pow",new STAttrMap().put("base", (base!=null?((StringTemplate)base.getTemplate()):null)).put("power", (power!=null?((StringTemplate)power.getTemplate()):null)));
 					}
@@ -503,30 +528,15 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 8 :
-					// calrtree.g:67:7: INT
-					{
-					INT3=(CommonTree)match(input,INT,FOLLOW_INT_in_expr363); 
-					stackUp(2);
-					// TEMPLATE REWRITE
-					// 67:24: -> intToDouble(n=$INT.text)
-					{
-						retval.st = templateLib.getInstanceOf("intToDouble",new STAttrMap().put("n", (INT3!=null?INT3.getText():null)));
-					}
-
-
-
-					}
-					break;
 				case 9 :
-					// calrtree.g:68:7: DOUBLE
+					// calrtree.g:68:7: INT
 					{
-					DOUBLE4=(CommonTree)match(input,DOUBLE,FOLLOW_DOUBLE_in_expr381); 
+					INT4=(CommonTree)match(input,INT,FOLLOW_INT_in_expr385); 
 					stackUp(2);
 					// TEMPLATE REWRITE
-					// 68:27: -> double(n=$DOUBLE.text)
+					// 68:24: -> intToDouble(n=$INT.text)
 					{
-						retval.st = templateLib.getInstanceOf("double",new STAttrMap().put("n", (DOUBLE4!=null?DOUBLE4.getText():null)));
+						retval.st = templateLib.getInstanceOf("intToDouble",new STAttrMap().put("n", (INT4!=null?INT4.getText():null)));
 					}
 
 
@@ -534,12 +544,27 @@ public class calrtree extends TreeParser {
 					}
 					break;
 				case 10 :
-					// calrtree.g:69:7: PI
+					// calrtree.g:69:7: DOUBLE
 					{
-					match(input,PI,FOLLOW_PI_in_expr399); 
+					DOUBLE5=(CommonTree)match(input,DOUBLE,FOLLOW_DOUBLE_in_expr403); 
 					stackUp(2);
 					// TEMPLATE REWRITE
-					// 69:23: -> double(n=Math.PI)
+					// 69:27: -> double(n=$DOUBLE.text)
+					{
+						retval.st = templateLib.getInstanceOf("double",new STAttrMap().put("n", (DOUBLE5!=null?DOUBLE5.getText():null)));
+					}
+
+
+
+					}
+					break;
+				case 11 :
+					// calrtree.g:70:7: PI
+					{
+					match(input,PI,FOLLOW_PI_in_expr421); 
+					stackUp(2);
+					// TEMPLATE REWRITE
+					// 70:23: -> double(n=Math.PI)
 					{
 						retval.st = templateLib.getInstanceOf("double",new STAttrMap().put("n", Math.PI));
 					}
@@ -548,13 +573,13 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 11 :
-					// calrtree.g:70:7: E
+				case 12 :
+					// calrtree.g:71:7: E
 					{
-					match(input,E,FOLLOW_E_in_expr417); 
+					match(input,E,FOLLOW_E_in_expr439); 
 					stackUp(2);
 					// TEMPLATE REWRITE
-					// 70:22: -> double(n=Math.E)
+					// 71:22: -> double(n=Math.E)
 					{
 						retval.st = templateLib.getInstanceOf("double",new STAttrMap().put("n", Math.E));
 					}
@@ -563,15 +588,15 @@ public class calrtree extends TreeParser {
 
 					}
 					break;
-				case 12 :
-					// calrtree.g:71:7: ID
+				case 13 :
+					// calrtree.g:72:7: ID
 					{
-					ID5=(CommonTree)match(input,ID,FOLLOW_ID_in_expr435); 
+					ID6=(CommonTree)match(input,ID,FOLLOW_ID_in_expr457); 
 					stackUp(2);
 					// TEMPLATE REWRITE
-					// 71:23: -> resolve(i=getIndex($ID.text))
+					// 72:23: -> resolve(i=getIndex($ID.text))
 					{
-						retval.st = templateLib.getInstanceOf("resolve",new STAttrMap().put("i", getIndex((ID5!=null?ID5.getText():null))));
+						retval.st = templateLib.getInstanceOf("resolve",new STAttrMap().put("i", getIndex((ID6!=null?ID6.getText():null))));
 					}
 
 
@@ -597,30 +622,32 @@ public class calrtree extends TreeParser {
 
 
 	public static final BitSet FOLLOW_lines_in_calc65 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_lines107 = new BitSet(new long[]{0x00000000000ECDF2L});
+	public static final BitSet FOLLOW_expr_in_lines107 = new BitSet(new long[]{0x00000000001ECDF2L});
 	public static final BitSet FOLLOW_DISPLAY_in_expr137 = new BitSet(new long[]{0x0000000000000004L});
 	public static final BitSet FOLLOW_expr_in_expr143 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_EQ_in_expr164 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_ID_in_expr166 = new BitSet(new long[]{0x00000000000ECDF0L});
-	public static final BitSet FOLLOW_expr_in_expr170 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_PLUS_in_expr196 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_expr_in_expr200 = new BitSet(new long[]{0x00000000000ECDF0L});
-	public static final BitSet FOLLOW_expr_in_expr204 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_MINUS_in_expr230 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_expr_in_expr234 = new BitSet(new long[]{0x00000000000ECDF0L});
-	public static final BitSet FOLLOW_expr_in_expr238 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_MULT_in_expr264 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_expr_in_expr268 = new BitSet(new long[]{0x00000000000ECDF0L});
-	public static final BitSet FOLLOW_expr_in_expr272 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_DIV_in_expr298 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_expr_in_expr302 = new BitSet(new long[]{0x00000000000ECDF0L});
-	public static final BitSet FOLLOW_expr_in_expr306 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_POW_in_expr332 = new BitSet(new long[]{0x0000000000000004L});
-	public static final BitSet FOLLOW_expr_in_expr336 = new BitSet(new long[]{0x00000000000ECDF0L});
-	public static final BitSet FOLLOW_expr_in_expr340 = new BitSet(new long[]{0x0000000000000008L});
-	public static final BitSet FOLLOW_INT_in_expr363 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DOUBLE_in_expr381 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PI_in_expr399 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_E_in_expr417 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_expr435 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_READ_in_expr164 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_expr166 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_EQ_in_expr186 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_ID_in_expr188 = new BitSet(new long[]{0x00000000001ECDF0L});
+	public static final BitSet FOLLOW_expr_in_expr192 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_PLUS_in_expr218 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_expr_in_expr222 = new BitSet(new long[]{0x00000000001ECDF0L});
+	public static final BitSet FOLLOW_expr_in_expr226 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_MINUS_in_expr252 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_expr_in_expr256 = new BitSet(new long[]{0x00000000001ECDF0L});
+	public static final BitSet FOLLOW_expr_in_expr260 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_MULT_in_expr286 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_expr_in_expr290 = new BitSet(new long[]{0x00000000001ECDF0L});
+	public static final BitSet FOLLOW_expr_in_expr294 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_DIV_in_expr320 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_expr_in_expr324 = new BitSet(new long[]{0x00000000001ECDF0L});
+	public static final BitSet FOLLOW_expr_in_expr328 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_POW_in_expr354 = new BitSet(new long[]{0x0000000000000004L});
+	public static final BitSet FOLLOW_expr_in_expr358 = new BitSet(new long[]{0x00000000001ECDF0L});
+	public static final BitSet FOLLOW_expr_in_expr362 = new BitSet(new long[]{0x0000000000000008L});
+	public static final BitSet FOLLOW_INT_in_expr385 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DOUBLE_in_expr403 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PI_in_expr421 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_E_in_expr439 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_expr457 = new BitSet(new long[]{0x0000000000000002L});
 }

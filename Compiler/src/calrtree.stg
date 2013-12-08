@@ -91,3 +91,10 @@ pow(base, power) ::= <<
 <power>
 invokestatic    java/lang/Math.pow(DD)D
 >>
+
+read(i) ::= <<
+aload_2
+invokevirtual   java/io/BufferedReader.readLine()Ljava/lang/String;
+invokestatic    java/lang/Double.parseDouble(Ljava/lang/String;)D
+dstore <i>
+>>

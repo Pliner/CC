@@ -58,6 +58,7 @@ lines
 
 expr
     : ^(DISPLAY e = expr {stackUp(1);}) -> print(e={$e.st})
+    | ^(READ ID{define($ID.text);}) -> read(i={getIndex($ID.text)})
     | ^(EQ ID e=expr) {define($ID.text);} -> define(i={getIndex($ID.text)}, e={$e.st})
     | ^(PLUS left=expr right=expr) {stackDown(2);} -> add(left={$left.st}, right={$right.st})
     | ^(MINUS left=expr right=expr) {stackDown(2);} -> sub(left={$left.st}, right={$right.st})
