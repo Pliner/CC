@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_translator2" default="compile.module.translator2">
+  <dirname property="module.translator2.basedir" file="${ant.file.module_translator2}"/>
+  
+  
+  <property name="compiler.args.translator2" value="${compiler.args}"/>
+  
+  <property name="translator2.output.dir" value="${module.translator2.basedir}/../out/production/Translator2"/>
+  <property name="translator2.testoutput.dir" value="${module.translator2.basedir}/../out/test/Translator2"/>
+  
+  <path id="translator2.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="translator2.module.production.classpath">
+    <path refid="library.antlr-3.5.1-complete-no-st3.classpath"/>
+  </path>
+  
+  <path id="translator2.runtime.production.module.classpath">
+    <pathelement location="${translator2.output.dir}"/>
+    <path refid="library.antlr-3.5.1-complete-no-st3.classpath"/>
+  </path>
+  
+  <path id="translator2.module.classpath">
+    <pathelement location="${translator2.output.dir}"/>
+    <path refid="library.antlr-3.5.1-complete-no-st3.classpath"/>
+  </path>
+  
+  <path id="translator2.runtime.module.classpath">
+    <pathelement location="${translator2.testoutput.dir}"/>
+    <pathelement location="${translator2.output.dir}"/>
+    <path refid="library.antlr-3.5.1-complete-no-st3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.translator2">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.translator2">
+    <patternset refid="excluded.from.module.translator2"/>
+  </patternset>
+  
+  <path id="translator2.module.sourcepath">
+    <dirset dir="${module.translator2.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.translator2" depends="compile.module.translator2.production,compile.module.translator2.tests" description="Compile module Translator2"/>
+  
+  <target name="compile.module.translator2.production" description="Compile module Translator2; production classes">
+    <mkdir dir="${translator2.output.dir}"/>
+    <javac destdir="${translator2.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
+      <compilerarg line="${compiler.args.translator2}"/>
+      <bootclasspath refid="translator2.module.bootclasspath"/>
+      <classpath refid="translator2.module.production.classpath"/>
+      <src refid="translator2.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.translator2"/>
+    </javac>
+    
+    <copy todir="${translator2.output.dir}">
+      <fileset dir="${module.translator2.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.translator2.tests" depends="compile.module.translator2.production" description="compile module Translator2; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.translator2" description="cleanup module">
+    <delete dir="${translator2.output.dir}"/>
+    <delete dir="${translator2.testoutput.dir}"/>
+  </target>
+</project>

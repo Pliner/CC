@@ -5,13 +5,9 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        FileReader groupFileR = new FileReader("calrtree.stg");
-        StringTemplateGroup templates = new StringTemplateGroup(groupFileR);
-        groupFileR.close();
+        StringTemplateGroup templates = new StringTemplateGroup(new InputStreamReader(Main.class.getResourceAsStream("calrtree.stg")));
         // create a CharStream that reads from standard input
-        //ANTLRInputStream input = new ANTLRInputStream(System.in);
-        InputStream is = new FileInputStream(new File("in.txt"));
-        ANTLRInputStream input = new ANTLRInputStream(is);
+        ANTLRInputStream input = new ANTLRInputStream(System.in);
         // create a lexer that feeds off of input CharStream
         calrLexer lexer = new calrLexer(input);
         // create a buffer of tokens pulled from the lexer
@@ -21,7 +17,6 @@ public class Main {
         // begin parsing at rule r
         calrParser.calc_return r = parser.calc();
         CommonTree t = (CommonTree)r.getTree();
-        System.out.println(t.toStringTree());
         // Walk resulting tree; create treenode stream first
         CommonTreeNodeStream nodes = new CommonTreeNodeStream(t);
         // AST nodes have payloads that point into token stream

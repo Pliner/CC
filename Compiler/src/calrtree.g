@@ -19,7 +19,7 @@ import java.util.HashMap;
     int maxStackSize = 2;
     int lastLocalVariable = 3;
     int stackSize = 2;
-
+    boolean unary = false;
     void stackUp(int size) {
         stackSize+= size;
         if(stackSize > maxStackSize)
@@ -61,7 +61,7 @@ expr
     | ^(READ ID{define($ID.text);}) -> read(i={getIndex($ID.text)})
     | ^(EQ ID e=expr) {define($ID.text);} -> define(i={getIndex($ID.text)}, e={$e.st})
     | ^(PLUS left=expr right=expr) {stackDown(2);} -> add(left={$left.st}, right={$right.st})
-    | ^(MINUS left=expr right=expr) {stackDown(2);} -> sub(left={$left.st}, right={$right.st})
+    | ^(MINUS left=expr right=expr?) {stackDown(2);} -> sub(left={$left.st}, right={$right.st})
     | ^(MULT left=expr right=expr) {stackDown(2);} -> mul(left={$left.st}, right={$right.st})
     | ^(DIV left=expr right=expr) {stackDown(2);} -> div(left={$left.st}, right={$right.st})
     | ^(POW base=expr power=expr) -> pow(base={$base.st}, power={$power.st})

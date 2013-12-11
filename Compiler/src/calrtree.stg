@@ -68,9 +68,14 @@ dadd
 
 
 sub(left, right) ::= <<
+<if(right)>
 <left>
 <right>
 dsub
+<else>
+<left>
+dneg
+<endif>
 >>
 
 mul(left, right) ::= <<

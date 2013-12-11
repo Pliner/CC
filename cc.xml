@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="cc" default="all">
-  
-  
-  <property file="cc.properties"/>
+
   <!-- Uncomment the following property if no tests compilation is needed -->
   <!-- 
   <property name="skip.tests" value="true"/>
@@ -67,6 +65,8 @@
   
   <import file="${basedir}/Calculator/module_calculator.xml"/>
   
+  <import file="${basedir}/Compiler/module_compiler.xml"/>
+  
   <import file="${basedir}/Translator/module_translator.xml"/>
   
   <import file="${basedir}/Translator2/module_translator2.xml"/>
@@ -75,28 +75,31 @@
     <!-- Perform any build initialization in this target -->
   </target>
   
-  <target name="clean" depends="clean.module.calculator, clean.module.translator, clean.module.translator2" description="cleanup all"/>
+  <target name="clean" depends="clean.module.calculator, clean.module.compiler, clean.module.translator, clean.module.translator2" description="cleanup all"/>
   
-  <target name="build.modules" depends="init, clean, compile.module.calculator, compile.module.translator, compile.module.translator2" description="build all modules"/>
+  <target name="build.modules" depends="init, clean, compile.module.calculator, compile.module.compiler, compile.module.translator, compile.module.translator2" description="build all modules"/>
   
   <target name="init.artifacts">
     <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
-    <property name="artifact.output.translator2" value="${basedir}/out/artifacts"/>
+    <property name="artifact.output.compiler:jar" value="${basedir}/Compiler/out"/>
     <mkdir dir="${artifacts.temp.dir}"/>
-    <property name="temp.jar.path.translator2.jar" value="${artifacts.temp.dir}/translator2.jar"/>
+    <property name="temp.jar.path.Compiler.jar" value="${artifacts.temp.dir}/Compiler.jar"/>
   </target>
   
-  <target name="artifact.translator2" depends="init.artifacts" description="Build &#39;translator2&#39; artifact">
-    <property name="artifact.temp.output.translator2" value="${artifacts.temp.dir}/translator2"/>
-    <mkdir dir="${artifact.temp.output.translator2}"/>
-    <jar destfile="${temp.jar.path.translator2.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain"/>
-    <copy file="${temp.jar.path.translator2.jar}" tofile="${artifact.temp.output.translator2}/translator2.jar"/>
+  <target name="artifact.compiler:jar" depends="init.artifacts, compile.module.compiler" description="Build &#39;Compiler:jar&#39; artifact">
+    <property name="artifact.temp.output.compiler:jar" value="${artifacts.temp.dir}/Compiler_jar"/>
+    <mkdir dir="${artifact.temp.output.compiler:jar}"/>
+    <jar destfile="${temp.jar.path.Compiler.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${compiler.output.dir}"/>
+      <zipfileset src="${basedir}/Compiler/libs/antlr-3.5.1-complete.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.Compiler.jar}" tofile="${artifact.temp.output.compiler:jar}/Compiler.jar"/>
   </target>
   
-  <target name="build.all.artifacts" depends="artifact.translator2" description="Build all artifacts">
-    <mkdir dir="${artifact.output.translator2}"/>
-    <copy todir="${artifact.output.translator2}">
-      <fileset dir="${artifact.temp.output.translator2}"/>
+  <target name="build.all.artifacts" depends="artifact.compiler:jar" description="Build all artifacts">
+    <mkdir dir="${artifact.output.compiler:jar}"/>
+    <copy todir="${artifact.output.compiler:jar}">
+      <fileset dir="${artifact.temp.output.compiler:jar}"/>
     </copy>
     
     <!-- Delete temporary files -->
