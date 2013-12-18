@@ -8,6 +8,52 @@ tokens {
     EXPR;
 }
 
+
+//override some methods and add new members to generated lexer
+@lexer::members {
+  //add new field
+  private List<RecognitionException> errors = new ArrayList<RecognitionException>();
+
+  //add new method
+  public List<RecognitionException> getAllErrors() {
+    return new ArrayList<RecognitionException>(errors);
+  }
+
+  //add new method
+  public boolean hasErrors() {
+    return !errors.isEmpty();
+  }
+
+  //override method
+  public void reportError(RecognitionException e) {
+    errors.add(e);
+        displayRecognitionError(this.getTokenNames(), e);
+  }
+
+}
+
+//override some methods and add new members to generated parser
+@parser::members {
+  //add new field
+  private List<RecognitionException> errors = new ArrayList<RecognitionException>();
+
+  //add new method
+  public List<RecognitionException> getAllErrors() {
+    return new ArrayList<RecognitionException>(errors);
+  }
+
+  //add new method
+  public boolean hasErrors() {
+    return !errors.isEmpty();
+  }
+
+  //override method
+  public void reportError(RecognitionException e) {
+    errors.add(e);
+    displayRecognitionError(this.getTokenNames(), e);
+  }
+
+}
 calc
     : lines EOF!
     ;
@@ -32,8 +78,7 @@ term
     ;
 
 factor
-    : PLUS^ f1=factor
-    | MINUS^ f2=factor
+    : MINUS^ f2=factor
     | power
     ;
 

@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 calr.g 2013-12-11 15:34:54
+// $ANTLR 3.5.1 calr.g 2013-12-18 14:18:50
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -28,6 +28,27 @@ public class calrLexer extends Lexer {
 	public static final int RPAR=21;
 	public static final int WHITESPACE=22;
 
+	  //add new field
+	  private List<RecognitionException> errors = new ArrayList<RecognitionException>();
+
+	  //add new method
+	  public List<RecognitionException> getAllErrors() {
+	    return new ArrayList<RecognitionException>(errors);
+	  }
+
+	  //add new method
+	  public boolean hasErrors() {
+	    return !errors.isEmpty();
+	  }
+
+	  //override method
+	  public void reportError(RecognitionException e) {
+	    errors.add(e);
+	        displayRecognitionError(this.getTokenNames(), e);
+	  }
+
+
+
 	// delegates
 	// delegators
 	public Lexer[] getDelegates() {
@@ -48,8 +69,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = READ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:54:5: ( 'read' )
-			// calr.g:54:7: 'read'
+			// calr.g:99:5: ( 'read' )
+			// calr.g:99:7: 'read'
 			{
 			match("read"); 
 
@@ -69,8 +90,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = DISPLAY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:58:5: ( 'display' )
-			// calr.g:58:7: 'display'
+			// calr.g:103:5: ( 'display' )
+			// calr.g:103:7: 'display'
 			{
 			match("display"); 
 
@@ -90,8 +111,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = PI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:61:5: ( 'PI' )
-			// calr.g:61:7: 'PI'
+			// calr.g:106:5: ( 'PI' )
+			// calr.g:106:7: 'PI'
 			{
 			match("PI"); 
 
@@ -111,8 +132,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = E;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:65:5: ( 'E' )
-			// calr.g:65:7: 'E'
+			// calr.g:110:5: ( 'E' )
+			// calr.g:110:7: 'E'
 			{
 			match('E'); 
 			}
@@ -131,8 +152,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:68:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// calr.g:68:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// calr.g:113:9: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// calr.g:113:11: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -142,7 +163,7 @@ public class calrLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// calr.g:68:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// calr.g:113:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -187,8 +208,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:72:5: ( INTPart )
-			// calr.g:72:7: INTPart
+			// calr.g:117:5: ( INTPart )
+			// calr.g:117:7: INTPart
 			{
 			mINTPart(); 
 
@@ -208,12 +229,12 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = DOUBLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:76:5: ( '.' INTPart | INTPart '.' | INTPart '.' INTPart )
+			// calr.g:121:5: ( '.' INTPart | INTPart '.' | INTPart '.' INTPart )
 			int alt2=3;
 			alt2 = dfa2.predict(input);
 			switch (alt2) {
 				case 1 :
-					// calr.g:76:7: '.' INTPart
+					// calr.g:121:7: '.' INTPart
 					{
 					match('.'); 
 					mINTPart(); 
@@ -221,7 +242,7 @@ public class calrLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// calr.g:77:7: INTPart '.'
+					// calr.g:122:7: INTPart '.'
 					{
 					mINTPart(); 
 
@@ -229,7 +250,7 @@ public class calrLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// calr.g:78:7: INTPart '.' INTPart
+					// calr.g:123:7: INTPart '.' INTPart
 					{
 					mINTPart(); 
 
@@ -252,10 +273,10 @@ public class calrLexer extends Lexer {
 	// $ANTLR start "INTPart"
 	public final void mINTPart() throws RecognitionException {
 		try {
-			// calr.g:82:5: ( ( '0' .. '9' )+ )
-			// calr.g:82:7: ( '0' .. '9' )+
+			// calr.g:127:5: ( ( '0' .. '9' )+ )
+			// calr.g:127:7: ( '0' .. '9' )+
 			{
-			// calr.g:82:7: ( '0' .. '9' )+
+			// calr.g:127:7: ( '0' .. '9' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -302,8 +323,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:86:5: ( '+' )
-			// calr.g:86:7: '+'
+			// calr.g:131:5: ( '+' )
+			// calr.g:131:7: '+'
 			{
 			match('+'); 
 			}
@@ -322,8 +343,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:90:5: ( '-' )
-			// calr.g:90:7: '-'
+			// calr.g:135:5: ( '-' )
+			// calr.g:135:7: '-'
 			{
 			match('-'); 
 			}
@@ -342,8 +363,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = MULT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:94:5: ( '*' )
-			// calr.g:94:7: '*'
+			// calr.g:139:5: ( '*' )
+			// calr.g:139:7: '*'
 			{
 			match('*'); 
 			}
@@ -362,8 +383,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:98:5: ( '/' )
-			// calr.g:98:7: '/'
+			// calr.g:143:5: ( '/' )
+			// calr.g:143:7: '/'
 			{
 			match('/'); 
 			}
@@ -382,8 +403,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = POW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:102:5: ( '**' )
-			// calr.g:102:7: '**'
+			// calr.g:147:5: ( '**' )
+			// calr.g:147:7: '**'
 			{
 			match("**"); 
 
@@ -403,8 +424,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = LPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:106:5: ( '(' )
-			// calr.g:106:7: '('
+			// calr.g:151:5: ( '(' )
+			// calr.g:151:7: '('
 			{
 			match('('); 
 			}
@@ -423,8 +444,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = RPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:110:5: ( ')' )
-			// calr.g:110:7: ')'
+			// calr.g:155:5: ( ')' )
+			// calr.g:155:7: ')'
 			{
 			match(')'); 
 			}
@@ -443,8 +464,8 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:114:5: ( '=' )
-			// calr.g:114:7: '='
+			// calr.g:159:5: ( '=' )
+			// calr.g:159:7: '='
 			{
 			match('='); 
 			}
@@ -463,10 +484,10 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = NL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:118:5: ( ( '\\r' | '\\n' )+ )
-			// calr.g:118:7: ( '\\r' | '\\n' )+
+			// calr.g:163:5: ( ( '\\r' | '\\n' )+ )
+			// calr.g:163:7: ( '\\r' | '\\n' )+
 			{
-			// calr.g:118:7: ( '\\r' | '\\n' )+
+			// calr.g:163:7: ( '\\r' | '\\n' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -515,10 +536,10 @@ public class calrLexer extends Lexer {
 		try {
 			int _type = WHITESPACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// calr.g:122:5: ( ( '\\t' | ' ' | '\\u000C' )+ )
-			// calr.g:122:7: ( '\\t' | ' ' | '\\u000C' )+
+			// calr.g:167:5: ( ( '\\t' | ' ' | '\\u000C' )+ )
+			// calr.g:167:7: ( '\\t' | ' ' | '\\u000C' )+
 			{
-			// calr.g:122:7: ( '\\t' | ' ' | '\\u000C' )+
+			// calr.g:167:7: ( '\\t' | ' ' | '\\u000C' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -747,7 +768,7 @@ public class calrLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "75:1: DOUBLE : ( '.' INTPart | INTPart '.' | INTPart '.' INTPart );";
+			return "120:1: DOUBLE : ( '.' INTPart | INTPart '.' | INTPart '.' INTPart );";
 		}
 	}
 
